@@ -107,7 +107,7 @@ class Routines:
                 BotVariables.has_requested_chat = False
                 BotVariables.chat_request_timer.Stop()
                 BotVariables.chat_request_timer.Reset()
-                
+
     @staticmethod
     def PracticeRotation():
         if Map.IsMapLoading() or not Map.IsMapReady():
@@ -128,12 +128,12 @@ class Routines:
         
         if not alive_enemies:
             return
-        
-        best_target = AgentArray.Routines.DetectLargestAgentCluster(alive_enemies, 100)
-        
+
         if in_range_enemies:
             best_target = AgentArray.Routines.DetectLargestAgentCluster(in_range_enemies, 100)
-        
+        else:
+            best_target = AgentArray.Routines.DetectLargestAgentCluster(alive_enemies, 100)
+
         target = best_target
         
         if BotVariables.action_timer.IsRunning():
@@ -160,7 +160,7 @@ class Routines:
             #     Combat.CastSpell(6, target) 
 
             for agent_id in in_range_enemies:
-                if Agent.IsCasting(agent_id) and (SkillBar.GetCasting() == 0 and not Agent.IsKnockedDown(my_id)):
+                if Agent.IsCasting(agent_id) and (not Agent.IsCasting(my_id) and not Agent.IsKnockedDown(my_id)):
                     
                     if Agent.GetCastingSkill(agent_id) in (52, 1095) and Combat.IsRecharged(8): #Panic = 52, Star Burst = 1095
                         Combat.CastSpell(8, agent_id)
@@ -299,8 +299,7 @@ class Routines:
                 BotVariables.interaction_stage = 0
                 BotVariables.action_timer.Stop()
                 BotVariables.restart_fsm = True
-                    
-                
+
     @staticmethod
     def CompleteQuest():
         if Map.IsMapLoading() or not Map.IsMapReady():
@@ -465,7 +464,22 @@ class Routines:
             BotVariables.action_timer.Stop()
             BotVariables.interaction_stage = 0
             Map.EnterChallenge()
-                
+            
+    @staticmethod
+    def Zaishen():
+        if Map.IsMapLoading() or not Map.IsMapReady():
+            return
+        
+        if not Map.GetMapID() == heroes_ascent and not Map.IsMapLoading() and Map.IsMapReady():
+            Py4GW.Console.Log("Routine", "Done with Zaishens")
+            next_step = FSMVariables.fsm.get_next_step_name()
+            if next_step:
+                FSMVariables.fsm.jump_to_state_by_name(next_step)
+        
+        if Map.GetMapID() == heroes_ascent and Map.IsExplorable():
+            Routines.PracticeRotation()
+            return
+  
     @staticmethod
     def Underworld():
         if Map.IsMapLoading() or not Map.IsMapReady():
@@ -500,21 +514,6 @@ class Routines:
                 
             if Combat.GetAliveEnemies():
                 Routines.PracticeRotation()
-            
-    @staticmethod
-    def Zaishen():
-        if Map.IsMapLoading() or not Map.IsMapReady():
-            return
-        
-        if not Map.GetMapID() == heroes_ascent and not Map.IsMapLoading() and Map.IsMapReady():
-            Py4GW.Console.Log("Routine", "Done with Zaishens")
-            next_step = FSMVariables.fsm.get_next_step_name()
-            if next_step:
-                FSMVariables.fsm.jump_to_state_by_name(next_step)
-        
-        if Map.GetMapID() == heroes_ascent and Map.IsExplorable():
-            Routines.PracticeRotation()
-            return
 
     @staticmethod
     def Fetid_River():
@@ -658,14 +657,12 @@ class Combat:
     
     @staticmethod
     def GetSpellRangeEnemies(enemies_array):
-        in_range_enemies = AgentArray.Filter.ByDistance(enemies_array, Player.GetXY(), Range.Spellcast.value + 1000)
-        return in_range_enemies
+        return AgentArray.Filter.ByDistance(enemies_array, Player.GetXY(), Range.Spellcast.value)
     
     @staticmethod
     def GetAliveEnemies():
         all_enemies = AgentArray.GetEnemyArray()
-        alive_enemies = AgentArray.Filter.ByCondition(all_enemies, lambda agent_id: Agent.IsAlive(agent_id))
-        return alive_enemies
+        return AgentArray.Filter.ByCondition(all_enemies, lambda agent_id: Agent.IsAlive(agent_id))
     
     @staticmethod
     def AmIMoving():
@@ -702,7 +699,7 @@ class Combat:
 def DrawWindow():
     global bot_vars, fsm_vars
 
-    PyImGui.begin("HA BOT")
+    PyImGui.begin("HA BOT unclust")
     PyImGui.text("State: " + BotVariables.state)
     fsm_state = FSMVariables.fsm.get_current_step_name() or "None"
     PyImGui.text("FSM State: " + fsm_state)
