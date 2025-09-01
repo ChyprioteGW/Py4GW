@@ -9864,6 +9864,8 @@ class CustomSkillClass:
         skill.SkillType = SkillType.Attack.value
         skill.TargetAllegiance = Skilltarget.Enemy.value
         skill.Nature = SkillNature.Offensive.value
+        skill.Conditions.EnemiesInRange = 2
+        skill.Conditions.EnemiesInRangeArea = Range.Adjacent.value
         self.skill_data[skill.SkillID] = skill
 
         # PVE-ONLY LIGHTBRINGER

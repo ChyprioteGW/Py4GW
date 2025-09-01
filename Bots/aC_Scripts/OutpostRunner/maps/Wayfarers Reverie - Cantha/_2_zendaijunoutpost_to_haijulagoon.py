@@ -37,6 +37,7 @@ _2_zendaijunoutpost_to_haijulagoon_segments = [
             (-135, 3511),
             (-1764, 4721),
             (-3186, 6184),
+            (-2782, 7049),
         ],
     },
     {

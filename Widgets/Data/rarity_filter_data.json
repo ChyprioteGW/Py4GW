@@ -1,7 +1,7 @@
 {
     "white": false,
     "blue": false,
-    "purple": true,
+    "purple": false,
     "gold": true,
     "green": false,
     "gold_coins": true

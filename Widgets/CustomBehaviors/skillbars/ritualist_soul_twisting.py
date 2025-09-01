@@ -35,10 +35,10 @@ class RitualistSoulTwisting_UtilitySkillBar(CustomBehaviorBaseUtility):
         self.shelter_utility: CustomSkillUtilityBase = ProtectiveSpiritUtility(skill=CustomSkill("Shelter"), current_build=in_game_build, score_definition=ScoreStaticDefinition(66), owned_spirit_model_id=SpiritModelID.SHELTER)
         self.union_utility: CustomSkillUtilityBase = ProtectiveSpiritUtility(skill=CustomSkill("Union"), current_build=in_game_build, score_definition=ScoreStaticDefinition(65), owned_spirit_model_id=SpiritModelID.UNION)
         self.displacement_utility: CustomSkillUtilityBase = ProtectiveSpiritUtility(skill=CustomSkill("Displacement"), current_build=in_game_build, score_definition=ScoreStaticDefinition(64), owned_spirit_model_id=SpiritModelID.DISPLACEMENT)
-        self.summon_spirit_utility: CustomSkillUtilityBase = SummonSpiritUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(95))
         self.armor_of_unfeeling_utility: CustomSkillUtilityBase = ArmorOfUnfeelingUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(80))
 
         # optional
+        self.summon_spirit_utility: CustomSkillUtilityBase = SummonSpiritUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(20))
         self.breath_of_the_great_dwarf_utility: CustomSkillUtilityBase = BreathOfTheGreatDwarfUtility(current_build=in_game_build, score_definition=ScorePerHealthGravityDefinition(0))
         self.flesh_of_my_flesh_utility: CustomSkillUtilityBase = HeroAiUtility(skill=CustomSkill("Flesh_of_My_Flesh"), current_build=in_game_build)
         self.strength_of_honor_utility: CustomSkillUtilityBase = StrengthOfHonorUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(20))
@@ -91,5 +91,5 @@ class RitualistSoulTwisting_UtilitySkillBar(CustomBehaviorBaseUtility):
             self.soul_twisting_utility.custom_skill,
             self.shelter_utility.custom_skill,
             self.union_utility.custom_skill,
-            self.summon_spirit_utility.custom_skill,
+            self.displacement_utility.custom_skill,
         ]

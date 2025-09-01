@@ -40,10 +40,10 @@ class RitualistSos_UtilitySkillBar(CustomBehaviorBaseUtility):
         self.signet_of_spirits_utility: CustomSkillUtilityBase = SignetOfSpiritsUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(92))
         self.vampirism_utility: CustomSkillUtilityBase = RawSpiritUtility(skill=CustomSkill("Vampirism"), current_build=in_game_build, score_definition=ScoreStaticDefinition(91), owned_spirit_model_id=SpiritModelID.VAMPIRISM)
         self.bloodsong_utility: CustomSkillUtilityBase = RawSpiritUtility(skill=CustomSkill("Bloodsong"), current_build=in_game_build, score_definition=ScoreStaticDefinition(90), owned_spirit_model_id=SpiritModelID.BLOODSONG)
-        self.gaze_of_fury_utility: CustomSkillUtilityBase = GazeOfFuryUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(80))
-        self.summon_spirit_utility: CustomSkillUtilityBase = SummonSpiritUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(95))
 
         #optional
+        self.gaze_of_fury_utility: CustomSkillUtilityBase = GazeOfFuryUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(50))
+        self.summon_spirit_utility: CustomSkillUtilityBase = SummonSpiritUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(60))
         self.painful_bond_utility: CustomSkillUtilityBase = RawAoeAttackUtility(skill=CustomSkill("Painful_Bond"), current_build=in_game_build, mana_required_to_cast=25, score_definition=ScorePerAgentQuantityDefinition(lambda enemy_qte: 40 if enemy_qte >= 3 else 0 if enemy_qte <= 2 else 0))
         self.armor_of_unfeeling_utility: CustomSkillUtilityBase = ArmorOfUnfeelingUtility(current_build=in_game_build, score_definition=ScoreStaticDefinition(35))
         self.breath_of_the_great_dwarf_utility: CustomSkillUtilityBase = BreathOfTheGreatDwarfUtility(current_build=in_game_build, score_definition=ScorePerHealthGravityDefinition(0))
