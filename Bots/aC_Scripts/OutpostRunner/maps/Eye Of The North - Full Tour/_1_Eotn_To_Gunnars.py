@@ -1,10 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
-# 1) IDs
+from Py4GWCoreLib.enums import MapID
+
 _1_eotn_to_gunnars_ids = {
-    "outpost_id": 642,
+    "outpost_id": MapID.EyeOfTheNorthOutpost,
 }
 
-# 2) Outpost exit path (in map 642)
 _1_eotn_to_gunnars_outpost_path = [
     (-1814, 2917),
     (-964, 2270),
@@ -13,11 +12,9 @@ _1_eotn_to_gunnars_outpost_path = [
     (1522, 464),
 ]
 
-# 3) Segments  
 _1_eotn_to_gunnars_segments = [
     {
-        # “Ice Cliff Chasms” explorable
-        "map_id": 499,
+        "map_id": MapID.IceCliffChasms,
         "path": [
             (2233, 77),
             (2586, 2100),
@@ -38,8 +35,7 @@ _1_eotn_to_gunnars_segments = [
         ],
     },
     {
-        # “Norrhart Domains” explorable
-        "map_id": 548,
+        "map_id": MapID.NorrhartDomains,
         "path": [
             (11007, -13090),
             (12261, -11439),
@@ -51,8 +47,7 @@ _1_eotn_to_gunnars_segments = [
         ],
     },
     {
-        # “Gunnar’s Hold” explorable
-        "map_id": 644,
+        "map_id": MapID.GunnarsHold,
         "path": [],  # no further walking once you arrive
     },
 ]

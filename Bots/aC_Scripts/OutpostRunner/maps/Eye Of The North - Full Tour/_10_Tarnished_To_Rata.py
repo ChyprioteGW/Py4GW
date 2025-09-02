@@ -1,23 +1,20 @@
 # maps/EOTN/_10_tarnished_to_rata.py
 
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _10_tarnished_to_rata_ids = {
-    "outpost_id": outpost_name_to_id["Tarnished Haven"],  # 641
+    "outpost_id": MapID.TarnishedHaven,
 }
 
-# 2) Exit path from Tarnished Haven (map 641)
 _10_tarnished_to_rata_outpost_path = [
     (18132.033203, -7464.680175),   # first _Run
     (17079.275390, -2616.100097),   # Move into Alcazia Tangle
 ]
 
-# 3) Explorable segments
 _10_tarnished_to_rata_segments = [
     {
         # Alcazia Tangle
-        "map_id": explorable_name_to_id["Alcazia Tangle"],
+        "map_id": MapID.AlcaziaTangle,
         "path": [
             (18184.322265, -7412.855957),
             (17944.570312, -5153.674316),
@@ -38,8 +35,7 @@ _10_tarnished_to_rata_segments = [
         ],
     },
     {
-        # Riven Earth
-        "map_id": explorable_name_to_id["Riven Earth"],
+        "map_id": MapID.RivenEarth,
         "path": [
             (-11733.154296, -11176.163085),
             (-16270.063476,  -9512.484375),
@@ -50,8 +46,7 @@ _10_tarnished_to_rata_segments = [
         ],
     },
     {
-        # Rata Sum (final outpost, ID 640)
-        "map_id": outpost_name_to_id["Rata Sum"],
+        "map_id": MapID.RataSum,
         "path": [],
     },
 ]

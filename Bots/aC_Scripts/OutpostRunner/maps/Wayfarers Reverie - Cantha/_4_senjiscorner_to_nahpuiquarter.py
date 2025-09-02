@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _4_senjiscorner_to_nahpuiquarter_ids = {
-    "outpost_id": 51,
+    "outpost_id": MapID.SenjisCorner,
 }
     
-# 2) Outpost exit path
 _4_senjiscorner_to_nahpuiquarter_outpost_path = [
     (8148, -16345),
     (7243, -16772),
     (7359, -17209),
 ]
 
-# 3) Segments
 _4_senjiscorner_to_nahpuiquarter_segments = [
     {
-        "map_id": 265,
+        "map_id": MapID.NahpuiQuarterExplorable,
         "path": [
             (10479, 12811),
             (11705, 11172),
@@ -38,7 +35,7 @@ _4_senjiscorner_to_nahpuiquarter_segments = [
         ],
     },
     {
-        "map_id": 265,
+        "map_id": MapID.NahpuiQuarterExplorable,
         "path": [],  # no further walking once you arrive
     },
 ]

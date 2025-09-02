@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _1_basaltgrotto_to_jennurshordeoutpost_ids = {
-    "outpost_id": 398,
+    "outpost_id": MapID.BasaltGrotto,
 }
 
-# 2) Outpost exit path
 _1_basaltgrotto_to_jennurshordeoutpost_outpost_path = [
     (55, 1622),
     (196, 598),
@@ -16,10 +14,9 @@ _1_basaltgrotto_to_jennurshordeoutpost_outpost_path = [
     (4811, -1974),
 ]
 
-# 3) Segments
 _1_basaltgrotto_to_jennurshordeoutpost_segments = [
     {
-        "map_id": 397,
+        "map_id": MapID.VehjinMines,
         "path": [
             (-18483, 13029),
             (-16838, 14247),
@@ -63,7 +60,7 @@ _1_basaltgrotto_to_jennurshordeoutpost_segments = [
         ],
     },
     {
-        "map_id": 476,
+        "map_id": MapID.JennursHordeOutpost,
         "path": [],  # no further walking once you arrive
     },
 ]

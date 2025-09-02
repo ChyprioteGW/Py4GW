@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _4_quarrelfalls_to_bloodstonefenoutpost_ids = {
-    "outpost_id": 142,
+    "outpost_id": MapID.VentarisRefuge,
 }
 
-# 2) Outpost exit path
 _4_quarrelfalls_to_bloodstonefenoutpost_outpost_path = [
         (1789, -2633),
         (2050, -2206),
 ]
 
-# 3) Segments
 _4_quarrelfalls_to_bloodstonefenoutpost_segments = [
     {
-        "map_id": 43,
+        "map_id": MapID.Silverwood,
         "path": [
             (937, 271),
             (-3418, 728),
@@ -35,7 +32,7 @@ _4_quarrelfalls_to_bloodstonefenoutpost_segments = [
         ],
     },
     {
-        "map_id": 10,
+        "map_id": MapID.BloodstoneFenOutpost,
         "path": [],  # no further walking once you arrive
     },
 ]

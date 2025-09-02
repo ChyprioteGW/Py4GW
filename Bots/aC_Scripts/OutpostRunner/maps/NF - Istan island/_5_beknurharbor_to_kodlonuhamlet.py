@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _5_beknurharbor_to_kodlonuhamlet_ids = {
-    "outpost_id": 487,
+    "outpost_id": MapID.BeknurHarbor,
 }
 
-# 2) Outpost exit path
 _5_beknurharbor_to_kodlonuhamlet_outpost_path = [
     (-18547, 12570),
     (-17645, 12110),
@@ -14,10 +12,9 @@ _5_beknurharbor_to_kodlonuhamlet_outpost_path = [
     (-14824, 10894),
 ]
 
-# 3) Segments
 _5_beknurharbor_to_kodlonuhamlet_segments = [
     {
-        "map_id": 486,
+        "map_id": MapID.IssnurIsles,
         "path": [
             (-15135, 10943),
             (-13085, 11197),
@@ -51,7 +48,7 @@ _5_beknurharbor_to_kodlonuhamlet_segments = [
         ],
     },
     {
-        "map_id": 489,
+        "map_id": MapID.KodlonuHamlet,
         "path": [],  # no further walking once you arrive
     },
 ]

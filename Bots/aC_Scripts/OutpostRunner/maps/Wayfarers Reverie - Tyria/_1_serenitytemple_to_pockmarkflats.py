@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _1_serenitytemple_to_pockmarkflats_ids = {
-    "outpost_id": 131,
+    "outpost_id": MapID.SerenityTemple,
 }
 
-# 2) Outpost exit path
 _1_serenitytemple_to_pockmarkflats_outpost_path = [
     (-6253, 22792),
     (-6191, 22065),
 ]
 
-# 3) Segments
 _1_serenitytemple_to_pockmarkflats_segments = [
     {
-        "map_id": 104,
+        "map_id": MapID.PockmarkFlats,
         "path": [
             (-6884, 21990),
             (-7329, 20029),
@@ -27,7 +24,7 @@ _1_serenitytemple_to_pockmarkflats_segments = [
         ],
     },
     {
-        "map_id": 104,
+        "map_id": MapID.PockmarkFlats,
         "path": [],  # no further walking once you arrive
     },
 ]

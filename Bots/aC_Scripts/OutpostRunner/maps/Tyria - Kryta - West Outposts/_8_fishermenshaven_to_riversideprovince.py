@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _8_fishermenshaven_to_riversideprovince_ids = {
-    "outpost_id": 137,
+    "outpost_id": MapID.FishermensHaven,
 }
 
-# 2) Outpost exit path
 _8_fishermenshaven_to_riversideprovince_outpost_path = [
     (2312, 10843),
     (2000, 11400),
 ]
 
-# 3) Segments
 _8_fishermenshaven_to_riversideprovince_segments = [
     {
-        "map_id": 63,
+        "map_id": MapID.StingrayStrand,
         "path": [
             (1806, 11745),
             (1283, 12828),
@@ -27,7 +24,7 @@ _8_fishermenshaven_to_riversideprovince_segments = [
         ],
     },
     {
-        "map_id": 53,
+        "map_id": MapID.TearsOfTheFallen,
         "path": [
             (5167, -6772),
             (2223, -5771),
@@ -36,7 +33,7 @@ _8_fishermenshaven_to_riversideprovince_segments = [
         ],
     },
     {
-        "map_id": 61,
+        "map_id": MapID.TwinSerpentLakes,
         "path": [
             (4742, 21882),
             (2198, 20081),
@@ -53,7 +50,7 @@ _8_fishermenshaven_to_riversideprovince_segments = [
         ],
     },
     {
-        "map_id": 73,
+        "map_id": MapID.RiversideProvinceOutpost,
         "path": [],
     },
 ]

@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _7_auroragladeoutpost_to_maguumastade_ids = {
-    "outpost_id": 12,
+    "outpost_id": MapID.AuroraGladeOutpost,
 }
 
-# 2) Outpost exit path
 _7_auroragladeoutpost_to_maguumastade_outpost_path = [
     (-18575, 4226),
     (-19074, 3265),
@@ -20,10 +18,9 @@ _7_auroragladeoutpost_to_maguumastade_outpost_path = [
     (-16419, -2818),
 ]
 
-# 3) Segments
 _7_auroragladeoutpost_to_maguumastade_segments = [
     {
-        "map_id": 44,
+        "map_id": MapID.EttinsBack,
         "path": [
             (23723, 12765),
             (24811, 11026),
@@ -46,7 +43,7 @@ _7_auroragladeoutpost_to_maguumastade_segments = [
         ],
     },
     {
-        "map_id": 47,
+        "map_id": MapID.DryTop,
         "path": [
             (-6952, 7748),
             (-6427, 5791),
@@ -64,7 +61,7 @@ _7_auroragladeoutpost_to_maguumastade_segments = [
         ],
     },
     {
-        "map_id": 48,
+        "map_id": MapID.TangleRoot,
         "path": [
             (-19253, 4047),
             (-20556, 2513),
@@ -91,7 +88,7 @@ _7_auroragladeoutpost_to_maguumastade_segments = [
         ],
     },
     {
-        "map_id": 141,
+        "map_id": MapID.MaguumaStade,
         "path": [],  # no further walking once you arrive
     },
 ]

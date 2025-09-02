@@ -1,22 +1,19 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _1_lionsarch_to_dalessioseaboard_ids = {
-    "outpost_id": outpost_name_to_id["Lions Arch"],
+    "outpost_id": MapID.LionsArch,
 }
 
-# 2) Outpost exit path (inside Lion's Arch)
 _1_lionsarch_to_dalessioseaboard_outpost_path = [
     (1219, 7222),
     (1021, 10651),
     (250, 12350),
 ]
 
-# 3) Segments
 _1_lionsarch_to_dalessioseaboard_segments = [
     {
         # "North Kryta Province" explorable
-        "map_id": explorable_name_to_id["North Kryta Province"],
+        "map_id": MapID.NorthKrytaProvince,
         "path": [
             (5116.0, -17415.0),
             (2346.0, -17307.0),
@@ -34,7 +31,7 @@ _1_lionsarch_to_dalessioseaboard_segments = [
     },
     {
         # "Gates of Kryta" outpost
-        "map_id": outpost_name_to_id["D'Alessio Seaboard outpost"],
+        "map_id": MapID.DalessioSeaboardOutpost,
         "path": [],  # no further walking once you arrive
     },
 ]

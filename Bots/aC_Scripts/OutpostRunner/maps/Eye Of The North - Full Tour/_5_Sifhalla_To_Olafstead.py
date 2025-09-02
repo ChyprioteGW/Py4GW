@@ -1,10 +1,7 @@
-# maps/EOTN/_5_sifhalla_to_olafstead.py
+from Py4GWCoreLib.enums import MapID
 
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
-
-# 1) IDs
 _5_sifhalla_to_olafstead_ids = {
-    "outpost_id": outpost_name_to_id["Sifhalla"],  # 643
+    "outpost_id": MapID.Sifhalla,
 }
 
 # 2) Exit path from Sifhalla (map 643)
@@ -13,11 +10,10 @@ _5_sifhalla_to_olafstead_outpost_path = [
     (13596.396484, 19212.427734),  # into Drakkar Lake
 ]
 
-# 3) Explorable segments
 _5_sifhalla_to_olafstead_segments = [
     {
         # Drakkar Lake (ID 513)
-        "map_id": explorable_name_to_id["Drakkar Lake"],
+        "map_id": MapID.DrakkarLake,
         "path": [
             (13946.335937, 14286.607421),
             (13599.999023,  6967.771484),
@@ -38,8 +34,7 @@ _5_sifhalla_to_olafstead_segments = [
         ],
     },
     {
-        # Varajar Fells (ID 553)
-        "map_id": explorable_name_to_id["Varajar Fells"],
+        "map_id": MapID.VarajarFells,
         "path": [
             ( -1605.245239, 12837.257812),
             ( -2047.884399,  8718.327148),
@@ -53,8 +48,7 @@ _5_sifhalla_to_olafstead_segments = [
         ],
     },
     {
-        # Olafstead (final outpost, ID 645)
-        "map_id": outpost_name_to_id["Olafstead"],
+        "map_id": MapID.Olafstead,
         "path": [],  # end of run
     },
 ]

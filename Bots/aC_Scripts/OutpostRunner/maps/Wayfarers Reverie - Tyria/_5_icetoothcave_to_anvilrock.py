@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _5_icetoothcave_to_anvilrock_ids = {
-    "outpost_id": 132,
+    "outpost_id": MapID.IceToothCave,
 }
 
-# 2) Outpost exit path
 _5_icetoothcave_to_anvilrock_outpost_path = [
     (-10985, 11410),
     (-11986, 11700),
     (-12946, 11978),
 ]
 
-# 3) Segments
 _5_icetoothcave_to_anvilrock_segments = [
     {
-        "map_id": 89,
+        "map_id": MapID.AnvilRock,
         "path": [
             (-12679, 11609),
             (-13591, 13457),
@@ -37,7 +34,7 @@ _5_icetoothcave_to_anvilrock_segments = [
         ],
     },
     {
-        "map_id": 89,
+        "map_id": MapID.AnvilRock,
         "path": [],  # no further walking once you arrive
     },
 ]

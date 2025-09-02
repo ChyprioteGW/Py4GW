@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _8_imperialsanctumoutpost_to_raisupalace_ids = {
-    "outpost_id": 226,
+    "outpost_id": MapID.ImperialSanctumOutpost,
 }
 
-# 2) Outpost exit path
 _8_imperialsanctumoutpost_to_raisupalace_outpost_path = [
     (-11726, -1500),
     (-10802, -1044),
@@ -16,10 +14,9 @@ _8_imperialsanctumoutpost_to_raisupalace_outpost_path = [
     (-9246, 3597),
 ]
 
-# 3) Segments
 _8_imperialsanctumoutpost_to_raisupalace_segments = [
     {
-        "map_id": 233,
+        "map_id": MapID.RaisuPalaceMission,
         "path": [
             (24230, 474),
             (24194, 2495),
@@ -45,7 +42,7 @@ _8_imperialsanctumoutpost_to_raisupalace_segments = [
         ],
     },
     {
-        "map_id": 233,
+        "map_id": MapID.RaisuPalaceMission,
         "path": [],  # no further walking once you arrive
     },
 ]

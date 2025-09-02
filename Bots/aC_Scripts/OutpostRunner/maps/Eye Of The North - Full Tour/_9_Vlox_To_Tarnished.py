@@ -1,10 +1,9 @@
 # maps/EOTN/_9_vlox_to_tarnished.py
 
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _9_vlox_to_tarnished_ids = {
-    "outpost_id": outpost_name_to_id["Vlox's Falls"],  # 624
+    "outpost_id": MapID.VloxsFalls,  # 624
 }
 
 # 2) Exit‐outpost path from Vlox’s Falls (map 624)
@@ -13,11 +12,10 @@ _9_vlox_to_tarnished_outpost_path = [
     (15519.092773, 12572.936523),  # into Arbor Bay
 ]
 
-# 3) Explorable segments
 _9_vlox_to_tarnished_segments = [
     {
         # Arbor Bay (ID 485)
-        "map_id": explorable_name_to_id["Arbor Bay"],
+        "map_id": MapID.ArborBay,
         "path": [
             (13331.803710, 10848.732421),
             ( 9207.168945,  7158.782226),
@@ -37,7 +35,7 @@ _9_vlox_to_tarnished_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Alcazia Tangle"],
+        "map_id": MapID.AlcaziaTangle,
         "path": [
             (23025.226562, 13777.048828),
             (21148.154296, 14763.507812),
@@ -57,7 +55,7 @@ _9_vlox_to_tarnished_segments = [
     },
     {
         # Tarnished Haven (final outpost, ID 641)
-        "map_id": outpost_name_to_id["Tarnished Haven"],
+        "map_id": MapID.TarnishedHaven,
         "path": [],  # arrival, no walking needed
     },
 ]

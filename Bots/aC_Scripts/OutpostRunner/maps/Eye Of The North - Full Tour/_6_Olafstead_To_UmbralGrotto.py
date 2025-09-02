@@ -1,23 +1,17 @@
-# maps/EOTN/_6_olafstead_to_umbralgrotto.py
+from Py4GWCoreLib.enums import MapID
 
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
-
-# 1) IDs
 _6_olafstead_to_umbralgrotto_ids = {
-    "outpost_id": outpost_name_to_id["Olafstead"],  # 645
+    "outpost_id": MapID.Olafstead,
 }
 
-# 2) Exit path from Olafstead (map 645)
 _6_olafstead_to_umbralgrotto_outpost_path = [
     (-883.285644, 1212.171020),
     (-1452.154785, 1177.976684),  # into Varajar Fells
 ]
 
-# 3) Explorable segments
 _6_olafstead_to_umbralgrotto_segments = [
     {
-        # Varajar Fells (ID 553)
-        "map_id": explorable_name_to_id["Varajar Fells"],
+        "map_id": MapID.VarajarFells,
         "path": [
             (-3127.843261, -2462.838867),
             (-4055.151855, -4363.498046),
@@ -31,8 +25,7 @@ _6_olafstead_to_umbralgrotto_segments = [
         ],
     },
     {
-        # Verdant Cascades (ID 566)
-        "map_id": explorable_name_to_id["Verdant Cascades"],
+        "map_id": MapID.VerdantCascades,
         "path": [
             (22595.748046, 12731.708984),
             (18976.330078, 11093.851562),
@@ -60,8 +53,7 @@ _6_olafstead_to_umbralgrotto_segments = [
         ],
     },
     {
-        # Umbral Grotto (final outpost, ID 639)
-        "map_id": outpost_name_to_id["Umbral Grotto"],
+        "map_id": MapID.UmbralGrotto,
         "path": [],  # end of run
     },
 ]

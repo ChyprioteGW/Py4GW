@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _1_beaconsperch_to_droknarsforge_ids = {
-    "outpost_id": outpost_name_to_id["Beacons Perch"],
+    "outpost_id": MapID.BeaconsPerch,
 }
 
-# 2) Outpost exit path
 _1_beaconsperch_to_droknarsforge_outpost_path = [
     (-8596, 33555),
     (-8450, 33150),
 ]
 
-# 3) Segments
 _1_beaconsperch_to_droknarsforge_segments = [
     {
-        "map_id": explorable_name_to_id["Lornar's Pass"],
+        "map_id": MapID.LornarsPass,
         "path": [
             (-8740.0, 32238.0),
             (-9592.0, 31054.0),
@@ -69,7 +66,7 @@ _1_beaconsperch_to_droknarsforge_segments = [
     },
 
     {
-        "map_id": explorable_name_to_id["Dreadnought's Drift"],
+        "map_id": MapID.DreadnoughtsDrift,
         "path": [
             (-6850.0, 4881.0),
             (-5923.0, 2324.0),
@@ -87,7 +84,7 @@ _1_beaconsperch_to_droknarsforge_segments = [
     },
 
     {
-        "map_id": explorable_name_to_id["Snake Dance"],
+        "map_id": MapID.SnakeDance,
         "path": [
             (-5645.0, 41872.0),
             (-5231.0, 41345.0),
@@ -151,7 +148,7 @@ _1_beaconsperch_to_droknarsforge_segments = [
     },
 
     {
-        "map_id": explorable_name_to_id["Talus Chute"],
+        "map_id": MapID.TalusChute,
         "path": [
             (-22278.0, 16193.0),
             (-22507.0, 13902.0),
@@ -182,7 +179,7 @@ _1_beaconsperch_to_droknarsforge_segments = [
     },
 
     {
-        "map_id": outpost_name_to_id["Droknar's Forge"],
+        "map_id": MapID.DroknarsForge,
         "path": [],  # no further walking once you arrive
     },
 ]

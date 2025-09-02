@@ -1,24 +1,17 @@
-# maps/EOTN/_3_longeyes_to_doomlore.py
+from Py4GWCoreLib.enums import MapID
 
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
-
-# 1) IDs
 _3_longeyes_to_doomlore_ids = {
-    # Teleport to Longeye’s Ledge outpost
-    "outpost_id": outpost_name_to_id["Longeyes Ledge"],  # 650
+    "outpost_id": MapID.LongeyesLedge
 }
 
-# 2) Exit path from the outpost (in map 650)
 _3_longeyes_to_doomlore_outpost_path = [
-    (-22469.261718, 13327.513671),  # Into town
-    (-21791.328125, 12595.533203),  # Towards Grothmar Wardowns
+    (-22469.261718, 13327.513671),
+    (-21791.328125, 12595.533203),
 ]
 
-# 3) Explorable segments
 _3_longeyes_to_doomlore_segments = [
     {
-        # Grothmar Wardowns
-        "map_id": explorable_name_to_id["Grothmar Wardowns"],
+        "map_id": MapID.GrothmarWardowns,
         "path": [
             (-18582.023437, 10399.527343),
             (-13987.378906, 10078.552734),
@@ -38,8 +31,7 @@ _3_longeyes_to_doomlore_segments = [
         ],
     },
     {
-        # Dalada Uplands
-        "map_id": explorable_name_to_id["Dalada Uplands"],
+        "map_id": MapID.DaladaUplands,
         "path": [
             (-16292.620117,  -715.887329),
             (-13617.916992,   405.243469),
@@ -52,8 +44,7 @@ _3_longeyes_to_doomlore_segments = [
         ],
     },
     {
-        # Doomlore Shrine (final map, no walking needed)
-        "map_id": outpost_name_to_id["Doomlore Shrine"],
+        "map_id": MapID.DoomloreShrine,
         "path": [],
     },
 ]

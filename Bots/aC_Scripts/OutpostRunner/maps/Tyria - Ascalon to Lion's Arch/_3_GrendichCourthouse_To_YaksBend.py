@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_grendichcourthouse_to_yaksbend_ids = {
-    "outpost_id": outpost_name_to_id["Grendich Courthouse"],
+    "outpost_id": MapID.GrendichCourthouse,
 }
-
-# 2) Outpost exit path (inside Grendich Courthouse)
+# (inside Grendich Courthouse)
 _3_grendichcourthouse_to_yaksbend_outpost_path = [
     (1686, 13755),
     (1900, 13600),
 ]
-
-# 3) Segments - Reversed from the original _5_YaksBend_To_GrendichCourthouse.py
+# Reversed from the original _5_YaksBend_To_GrendichCourthouse.py
 _3_grendichcourthouse_to_yaksbend_segments = [
     {
-        "map_id": explorable_name_to_id["Diessa Lowlands"],
+        "map_id": MapID.DiessaLowlands,
         "path": [
             (2779.0, 13042.0),
             (2798.0, 11715.0),
@@ -45,7 +42,7 @@ _3_grendichcourthouse_to_yaksbend_segments = [
     },
     
     {
-        "map_id": explorable_name_to_id["Ascalon Foothills"],
+        "map_id": MapID.AscalonFoothills,
         "path": [
             (7606, -4686),
             (7087.0, -5468.0),
@@ -78,7 +75,7 @@ _3_grendichcourthouse_to_yaksbend_segments = [
     },
     
     {
-        "map_id": explorable_name_to_id["Traveler's Vale"],
+        "map_id": MapID.TravelersVale,
         "path": [
             (10327, -17067),
             (9677.0, -16618.0),
@@ -100,7 +97,7 @@ _3_grendichcourthouse_to_yaksbend_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Yaks Bend"],
+        "map_id": MapID.YaksBend,
         "path": [],
     },
 ]

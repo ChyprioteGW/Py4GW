@@ -1,10 +1,10 @@
 # maps/EOTN/_8_vlox_to_gadds.py
 
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
 # 1) Teleport ID
 _8_vlox_to_gadds_ids = {
-    "outpost_id": outpost_name_to_id["Vlox's Falls"],  
+    "outpost_id": MapID.VloxsFalls,  
 }
 
 _8_vlox_to_gadds_outpost_path = [
@@ -14,7 +14,7 @@ _8_vlox_to_gadds_outpost_path = [
 
 _8_vlox_to_gadds_segments = [
     {
-        "map_id": explorable_name_to_id["Arbor Bay"],
+        "map_id": MapID.ArborBay,
         "path": [
             (13957.639648, 10939.767578),
             (11597.432617,  6914.898925),
@@ -29,7 +29,7 @@ _8_vlox_to_gadds_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Shards of Oor (level 1)"],
+        "map_id": MapID.ShardsOfOorLvl1,
         "path": [
             (-12004.113281, 10065.341796),
             ( -7597.928710, 10046.100585),
@@ -46,8 +46,7 @@ _8_vlox_to_gadds_segments = [
         ],
     },
     {
-        # Gadds Encampment (map 638) — final arrival, no walking needed
-        "map_id": outpost_name_to_id["Gadd's Encampment"],
+        "map_id": MapID.GaddsEncampment,
         "path": [],
     },
 ]

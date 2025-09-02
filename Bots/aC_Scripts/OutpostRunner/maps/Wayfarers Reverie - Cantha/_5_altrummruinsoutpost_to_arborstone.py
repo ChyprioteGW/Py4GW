@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _5_altrummruinsoutpost_to_arborstone_ids = {
-    "outpost_id": 272,
+    "outpost_id": MapID.AltrummRuinsOutpost,
 }
 
-# 2) Outpost exit path
 _5_altrummruinsoutpost_to_arborstone_outpost_path = [
     (4570, 6344),
     (5568, 6659),
     (6329, 7421),
 ]
 
-# 3) Segments
 _5_altrummruinsoutpost_to_arborstone_segments = [
     {
-        "map_id": 244,
+        "map_id": MapID.ArborstoneExplorable,
         "path": [
             (9552, -19769),
             (10603, -18041),
@@ -28,7 +25,7 @@ _5_altrummruinsoutpost_to_arborstone_segments = [
         ],
     },
     {
-        "map_id": 244,
+        "map_id": MapID.ArborstoneExplorable,
         "path": [],  # no further walking once you arrive
     },
 ]

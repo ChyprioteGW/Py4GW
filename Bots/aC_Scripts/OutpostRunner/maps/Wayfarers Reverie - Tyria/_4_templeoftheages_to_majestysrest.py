@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _4_templeoftheages_to_majestysrest_ids = {
-    "outpost_id": 138,
+    "outpost_id": MapID.TempleOfTheAges,
 }
 
-# 2) Outpost exit path
 _4_templeoftheages_to_majestysrest_outpost_path = [
     (-5072, 16783),
     (-5230, 15689),
 ]
 
-# 3) Segments
 _4_templeoftheages_to_majestysrest_segments = [
     {
-        "map_id": 18,
+        "map_id": MapID.TheBlackCurtain,
         "path": [
             (-5205, 15562),
             (-7169, 15107),
@@ -33,7 +30,7 @@ _4_templeoftheages_to_majestysrest_segments = [
         ],
     },
     {
-        "map_id": 837,
+        "map_id": MapID.TalmarkWilderness,
         "path": [
             (18675, 769),
             (17208, 2136),
@@ -62,7 +59,7 @@ _4_templeoftheages_to_majestysrest_segments = [
         ],
     },
     {
-        "map_id": 60,
+        "map_id": MapID.MajestysRest,
         "path": [
             (22856, -5465),
             (21671, -3790),
@@ -76,7 +73,7 @@ _4_templeoftheages_to_majestysrest_segments = [
         ],
     },
     {
-        "map_id": 60,
+        "map_id": MapID.MajestysRest,
         "path": [],  # no further walking once you arrive
     },
 ]

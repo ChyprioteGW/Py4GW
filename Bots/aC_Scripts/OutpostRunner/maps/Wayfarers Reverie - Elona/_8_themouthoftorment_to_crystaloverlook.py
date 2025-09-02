@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _8_themouthoftorment_to_crystaloverlook_ids = {
-    "outpost_id": 440,
+    "outpost_id": MapID.TheMouthOfTorment,
 }
 
-# 2) Outpost exit path
 _8_themouthoftorment_to_crystaloverlook_outpost_path = [
     (-984, -5223),
     (-1956, -5530),
@@ -15,10 +13,9 @@ _8_themouthoftorment_to_crystaloverlook_outpost_path = [
     (-5822, -6901),
 ]
 
-# 3) Segments
 _8_themouthoftorment_to_crystaloverlook_segments = [
     {
-        "map_id": 439,
+        "map_id": MapID.TheRupturedHeart,
         "path": [
             (-5013, -6571),
             (-6915, -5733),
@@ -33,7 +30,7 @@ _8_themouthoftorment_to_crystaloverlook_segments = [
         ],
     },
     {
-        "map_id": 448,
+        "map_id": MapID.CrystalOverlook,
         "path": [
             (13233.972656, 21073.199219),
             (11546.242188, 18832.789062),
@@ -49,7 +46,7 @@ _8_themouthoftorment_to_crystaloverlook_segments = [
         ],
     },
     {
-        "map_id": 448,
+        "map_id": MapID.CrystalOverlook,
         "path": [],  # no further walking once you arrive
     },
 ]

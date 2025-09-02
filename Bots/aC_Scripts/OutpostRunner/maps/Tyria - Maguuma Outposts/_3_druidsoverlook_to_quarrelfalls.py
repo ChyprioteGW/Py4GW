@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_druidsoverlook_to_quarrelfalls_ids = {
-    "outpost_id": 140,
+    "outpost_id": MapID.DruidsOverlook,
 }
 
-# 2) Outpost exit path
 _3_druidsoverlook_to_quarrelfalls_outpost_path = [
     (4351, -9980),
     (3389, -9547),
     (2782, -9331),
 ]
 
-# 3) Segments
 _3_druidsoverlook_to_quarrelfalls_segments = [
     {
-        "map_id": 41,
+        "map_id": MapID.SageLands,
         "path": [
             (2599, -9263),
             (1852, -7396),
@@ -44,7 +41,7 @@ _3_druidsoverlook_to_quarrelfalls_segments = [
         ],
     },
     {
-        "map_id": 42,
+        "map_id": MapID.MamnoonLagoon,
         "path": [
             (7213, 5186),
             (5425, 6143),
@@ -61,7 +58,7 @@ _3_druidsoverlook_to_quarrelfalls_segments = [
         ],
     },
     {
-        "map_id": 43,
+        "map_id": MapID.Silverwood,
         "path": [
             (17163, 13225),
             (15504, 14358),

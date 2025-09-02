@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _2_camprankor_to_droknarsforge_ids = {
-    "outpost_id": outpost_name_to_id["Camp Rankor"],
+    "outpost_id": MapID.CampRankor,
 }
 
-# 2) Outpost exit path
 _2_camprankor_to_droknarsforge_outpost_path = [
     (7555, -45050),
 ]
 
-# 3) Segments
 _2_camprankor_to_droknarsforge_segments = [
  
     {
-        "map_id": explorable_name_to_id["Talus Chute"],
+        "map_id": MapID.TalusChute,
         "path": [
             (-22278.0, 16193.0),
             (-22507.0, 13902.0),
@@ -45,7 +42,7 @@ _2_camprankor_to_droknarsforge_segments = [
     },
 
     {
-        "map_id": outpost_name_to_id["Droknar's Forge"],
+        "map_id": MapID.DroknarsForge,
         "path": [],  # no further walking once you arrive
     },
 ]

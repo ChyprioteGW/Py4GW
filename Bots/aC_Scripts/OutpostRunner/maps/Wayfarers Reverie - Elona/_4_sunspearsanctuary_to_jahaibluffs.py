@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _4_sunspearsanctuary_to_jahaibluffs_ids = {
-    "outpost_id": 387,
+    "outpost_id": MapID.SunspearSanctuary,
 }
 
-# 2) Outpost exit path
 _4_sunspearsanctuary_to_jahaibluffs_outpost_path = [
     (-985, 263),
     (-950, 1298),
@@ -15,10 +13,9 @@ _4_sunspearsanctuary_to_jahaibluffs_outpost_path = [
     (-450, 4327),
 ]
 
-# 3) Segments
 _4_sunspearsanctuary_to_jahaibluffs_segments = [
     {
-        "map_id": 436,
+        "map_id": MapID.CommandPost,
         "path": [
             (306, 5727),
             (3695, 7198),
@@ -26,7 +23,7 @@ _4_sunspearsanctuary_to_jahaibluffs_segments = [
         ],
     },
     {
-        "map_id": 369,
+        "map_id": MapID.JahaiBluffs,
         "path": [
             (-7273, 8727),
             (-5541, 9766),
@@ -49,7 +46,7 @@ _4_sunspearsanctuary_to_jahaibluffs_segments = [
         ],
     },
     {
-        "map_id": 369,
+        "map_id": MapID.JahaiBluffs,
         "path": [],  # no further walking once you arrive
     },
 ]

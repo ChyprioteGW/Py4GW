@@ -1,19 +1,16 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_fortranik_to_serenitytemple_ids = {
-    "outpost_id": outpost_name_to_id["Fort Ranik outpost"],
+    "outpost_id": MapID.FortRanikOutpost,
 }
-# 2) Outpost exit path
 _3_fortranik_to_serenitytemple_outpost_path = [
     (7252, -30735),
     (7218, -32507),
     (7225, -32700)
 ]
-# 3) Segments
 _3_fortranik_to_serenitytemple_segments = [
     {
-        "map_id": explorable_name_to_id["Regent Valley"],
+        "map_id": MapID.RegentValley,
         "path": [
             (22703.0, 4381.0),
             (21485.0, 2637.0),
@@ -30,7 +27,7 @@ _3_fortranik_to_serenitytemple_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Pockmark Flats"],
+        "map_id": MapID.PockmarkFlats,
         "path": [
             (-11520.0, -19414.0),
             (-8531.0, -20531.0),
@@ -95,8 +92,7 @@ _3_fortranik_to_serenitytemple_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Serenity Temple"],
-        "path": [
-        ],
+        "map_id": MapID.SerenityTemple,
+        "path": [],
     }
 ]

@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _5_bergenhotsprings_to_templeoftheages_ids = {
-    "outpost_id": outpost_name_to_id["Bergen Hot Springs"],
+    "outpost_id": MapID.BergenHotSprings,
 }
 
-# 2) Outpost exit path
 _5_bergenhotsprings_to_templeoftheages_outpost_path = [
     (15521, -15378),
     (15450, -15050),
 ]
 
-# 3) Segments
 _5_bergenhotsprings_to_templeoftheages_segments = [
     {
-        "map_id": explorable_name_to_id["Nebo Terrace"],
+        "map_id": MapID.NeboTerrace,
         "path": [
             (13276.0, -14317.0),
             (10761.0, -14522.0),
@@ -29,7 +26,7 @@ _5_bergenhotsprings_to_templeoftheages_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Cursed Lands"],
+        "map_id": MapID.CursedLands,
         "path": [
             (-4523.0, -9755.0),
             (-4067.0, -8786.0),
@@ -50,7 +47,7 @@ _5_bergenhotsprings_to_templeoftheages_segments = [
         ], 
     },
     {
-        "map_id": explorable_name_to_id["The Black Curtain"],
+        "map_id": MapID.TheBlackCurtain,
         "path": [
             (17882.0, 15989.0),
             (16343.0, 15499.0),
@@ -74,7 +71,7 @@ _5_bergenhotsprings_to_templeoftheages_segments = [
         ], 
     },
     {
-        "map_id": outpost_name_to_id["Temple of the Ages"],
+        "map_id": MapID.TempleOfTheAges,
         "path": [],  # no further walking once you arrive
     },
 ]

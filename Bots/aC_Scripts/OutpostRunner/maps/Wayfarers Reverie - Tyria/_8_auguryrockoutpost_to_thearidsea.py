@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _8_auguryrockoutpost_to_thearidsea_ids = {
-    "outpost_id": 38,
+    "outpost_id": MapID.AuguryRockOutpost,
 }
 
-# 2) Outpost exit path
 _8_auguryrockoutpost_to_thearidsea_outpost_path = [
     (-15266, 802),
     (-15226, 1842),
     (-15187, 2841),
 ]
 
-# 3) Segments
 _8_auguryrockoutpost_to_thearidsea_segments = [
     {
-        "map_id": 115,
+        "map_id": MapID.SkywardReach,
         "path": [
             (-15096, 3695),
             (-13090, 3910),
@@ -39,7 +36,7 @@ _8_auguryrockoutpost_to_thearidsea_segments = [
         ],
     },
     {
-        "map_id": 112,
+        "map_id": MapID.TheAridSea,
         "path": [
             (-1893, 19605),
             (-315, 18321),
@@ -65,7 +62,7 @@ _8_auguryrockoutpost_to_thearidsea_segments = [
         ],
     },
     {
-        "map_id": 112,
+        "map_id": MapID.TheAridSea,
         "path": [],  # no further walking once you arrive
     },
 ]

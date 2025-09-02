@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _5_mihanutownship_to_holdingsofchokhin_ids = {
-    "outpost_id": 396,
+    "outpost_id": MapID.MihanuTownship,
 }
 
-# 2) Outpost exit path
 _5_mihanutownship_to_holdingsofchokhin_outpost_path = [
     (602, 1593),
     (276, 2562),
@@ -14,10 +12,9 @@ _5_mihanutownship_to_holdingsofchokhin_outpost_path = [
     (-704, 5475),
 ]
 
-# 3) Segments
 _5_mihanutownship_to_holdingsofchokhin_segments = [
     {
-        "map_id": 395,
+        "map_id": MapID.HoldingsOfChokhin,
         "path": [
             (17583.806641, -16078.599609),
             (16911.460938, -15386.255859),
@@ -47,7 +44,7 @@ _5_mihanutownship_to_holdingsofchokhin_segments = [
         ],
     },
     {
-        "map_id": 395,
+        "map_id": MapID.HoldingsOfChokhin,
         "path": [],  # no further walking once you arrive
     },
 ]

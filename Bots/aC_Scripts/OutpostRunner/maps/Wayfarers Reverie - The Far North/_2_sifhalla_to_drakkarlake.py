@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _2_sifhalla_to_drakkarlake_ids = {
-    "outpost_id": 643,
+    "outpost_id": MapID.Sifhalla,
 }
 
-# 2) Outpost exit path
 _2_sifhalla_to_drakkarlake_outpost_path = [
     (11055, 23616),
     (10010, 23761),
     (9400, 23841),
 ]
 
-# 3) Segments
 _2_sifhalla_to_drakkarlake_segments = [
     {
-        "map_id": 513,
+        "map_id": MapID.DrakkarLake,
         "path": [
             (13588.061523, 18813.888672),
             (13873.824219, 14656.845703),
@@ -29,7 +26,7 @@ _2_sifhalla_to_drakkarlake_segments = [
         ],
     },
     {
-        "map_id": 513,
+        "map_id": MapID.DrakkarLake,
         "path": [],  # no further walking once you arrive
     },
 ]

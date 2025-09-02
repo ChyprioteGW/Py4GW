@@ -1,8 +1,7 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_bergenhotsprings_to_beetletun_ids = {
-    "outpost_id": outpost_name_to_id["Bergen Hot Springs"],
+    "outpost_id": MapID.BergenHotSprings,
 }
 
 # 2) Outpost exit path
@@ -11,10 +10,9 @@ _3_bergenhotsprings_to_beetletun_outpost_path = [
     (15450, -15050),
 ]
 
-# 3) Segments
 _3_bergenhotsprings_to_beetletun_segments = [
     {
-        "map_id": explorable_name_to_id["Nebo Terrace"],
+        "map_id": MapID.NeboTerrace,
         "path": [
             (14184.0, -9819.0),
             (15157.0, -7087.0),
@@ -37,7 +35,7 @@ _3_bergenhotsprings_to_beetletun_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Beetletun"],
+        "map_id": MapID.Beetletun,
         "path": [],  # no further walking once you arrive
     },
 ]

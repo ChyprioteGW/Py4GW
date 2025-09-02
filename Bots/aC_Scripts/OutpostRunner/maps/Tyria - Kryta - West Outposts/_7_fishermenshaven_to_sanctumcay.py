@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _7_fishermenshaven_to_sanctumcay_ids = {
-    "outpost_id": 137,
+    "outpost_id": MapID.FishermensHaven,
 }
 
-# 2) Outpost exit path
 _7_fishermenshaven_to_sanctumcay_outpost_path = [
     (2312, 10843),
     (2000, 11400),
 ]
 
-# 3) Segments
 _7_fishermenshaven_to_sanctumcay_segments = [
     {
-        "map_id": 63,
+        "map_id": MapID.StingrayStrand,
         "path": [
             (1806, 11745),
             (1283, 12828),
@@ -32,7 +29,7 @@ _7_fishermenshaven_to_sanctumcay_segments = [
         ],
     },
     {
-        "map_id": 19,
+        "map_id": MapID.SanctumCayOutpost,
         "path": [],
     },
 ]

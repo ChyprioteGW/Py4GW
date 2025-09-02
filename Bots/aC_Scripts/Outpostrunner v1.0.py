@@ -628,20 +628,17 @@ def render_path_ui():
 
             try:
                 with open(filename, "w") as f:
-                    f.write("from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id\n\n")
+                    f.write("from Py4GWCoreLib.enums import MapID\n\n")
 
-                    f.write("# 1) IDs\n")
                     f.write(f"{base_var}_ids = {{\n")
                     f.write(f'    "outpost_id": {state["outpost"]["id"]},\n')
                     f.write("}\n\n")
 
-                    f.write("# 2) Outpost exit path\n")
                     f.write(f"{base_var}_outpost_path = [\n")
                     for x, y in state["outpost"]["path"]:
                         f.write(f"    ({round(x)}, {round(y)}),\n")
                     f.write("]\n\n")
 
-                    f.write("# 3) Segments\n")
                     f.write(f"{base_var}_segments = [\n")
                     for seg in state["segments"]:
                         f.write("    {\n")

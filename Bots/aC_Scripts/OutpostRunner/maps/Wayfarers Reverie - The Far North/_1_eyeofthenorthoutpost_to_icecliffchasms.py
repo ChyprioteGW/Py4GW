@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _1_eyeofthenorthoutpost_to_icecliffchasms_ids = {
-    "outpost_id": 642,
+    "outpost_id": MapID.EyeOfTheNorthOutpost,
 }
 
-# 2) Outpost exit path
 _1_eyeofthenorthoutpost_to_icecliffchasms_outpost_path = [
     (-272, 1806),
     (540, 1221),
     (1126, 835),
 ]
 
-# 3) Segments
 _1_eyeofthenorthoutpost_to_icecliffchasms_segments = [
     {
-        "map_id": 499,
+        "map_id": MapID.IceCliffChasms,
         "path": [
             (2233.0, 77.0),
             (1982.312622, -145.371964),
@@ -27,7 +24,7 @@ _1_eyeofthenorthoutpost_to_icecliffchasms_segments = [
         ],
     },
     {
-        "map_id": 499,
+        "map_id": MapID.IceCliffChasms,
         "path": [],  # no further walking once you arrive
     },
 ]

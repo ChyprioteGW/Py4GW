@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _4_doomloreshrine_to_daladauplands_ids = {
-    "outpost_id": 648,
+    "outpost_id": MapID.DoomloreShrine,
 }
 
-# 2) Outpost exit path
 _4_doomloreshrine_to_daladauplands_outpost_path = [
     (-15964, 14879),
     (-15607, 13905),
     (-15335, 13451),
 ]
 
-# 3) Segments
 _4_doomloreshrine_to_daladauplands_segments = [
     {
-        "map_id": 647,
+        "map_id": MapID.DaladaUplands,
         "path": [
             (-14531.078125, 12779.207031),
             (-17982.527344,  9744.823242),
@@ -28,7 +25,7 @@ _4_doomloreshrine_to_daladauplands_segments = [
         ],
     },
     {
-        "map_id": 647,
+        "map_id": MapID.DaladaUplands,
         "path": [],  # no further walking once you arrive
     },
 ]

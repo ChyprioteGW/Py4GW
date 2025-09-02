@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _7_gatesofkryta_to_lionsarch_ids = {
-    "outpost_id": outpost_name_to_id["Gates of Kryta outpost"],
+    "outpost_id": MapID.GatesOfKrytaOutpost,
 }
 
-# 2) Outpost exit path (inside Gates of Kryta)
 _7_gatesofkryta_to_lionsarch_outpost_path = [
     (-4203, 26650),
     (-4333, 26800),
 ]
 
-# 3) Segments
 _7_gatesofkryta_to_lionsarch_segments = [
     {
-        "map_id": explorable_name_to_id["Scoundrel's Rise"],
+        "map_id": MapID.ScoundrelsRise,
         "path": [
             (200.0, -2640.0),
             (2096.0, -2269.0),
@@ -34,7 +31,7 @@ _7_gatesofkryta_to_lionsarch_segments = [
     },
     
     {
-        "map_id": explorable_name_to_id["North Kryta Province"],
+        "map_id": MapID.NorthKrytaProvince,
         "path": [
             (19257.0, 10757.0),
             (17182.0, 12514.0),
@@ -63,7 +60,7 @@ _7_gatesofkryta_to_lionsarch_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Lions Arch"],
+        "map_id": MapID.LionsArch,
         "path": [],
     },
 ]

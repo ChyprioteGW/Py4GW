@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _4_yaksbend_to_icetoothcave_ids = {
-    "outpost_id": outpost_name_to_id["Yaks Bend"],
+    "outpost_id": MapID.YaksBend,
 }
 
-# 2) Outpost exit path (inside Yak's Bend)
 _4_yaksbend_to_icetoothcave_outpost_path = [
     (9295, 4145),
     (9280, 4050),
 ]
-
-# 3) Segments 
+ 
 _4_yaksbend_to_icetoothcave_segments = [
     {
-        "map_id": explorable_name_to_id["Traveler's Vale"],
+        "map_id": MapID.TravelersVale,
         "path": [
             (8815.0, 2563.0),
             (8245.0, -696.0),
@@ -39,7 +36,7 @@ _4_yaksbend_to_icetoothcave_segments = [
     },
     
     {
-        "map_id": explorable_name_to_id["Iron Horse Mine"],
+        "map_id": MapID.IronHorseMine,
         "path": [
             (24176.0, -6004.0),
             (22756.0, -5700.0),
@@ -81,7 +78,7 @@ _4_yaksbend_to_icetoothcave_segments = [
     },
     
     {
-        "map_id": explorable_name_to_id["Anvil Rock"],
+        "map_id": MapID.AnvilRock,
         "path": [
             (19364.0, 19008.0),
             (17995.0, 17903.0),
@@ -107,7 +104,7 @@ _4_yaksbend_to_icetoothcave_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Ice Tooth Cave"],
+        "map_id": MapID.IceToothCave,
         "path": [],
     },
 ]

@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_camphojanu_to_barbarousshore_ids = {
-    "outpost_id": 376,
+    "outpost_id": MapID.CampHojanu,
 }
 
-# 2) Outpost exit path
 _3_camphojanu_to_barbarousshore_outpost_path = [
     (-17427, 18812),
     (-16391, 18637),
@@ -14,10 +12,9 @@ _3_camphojanu_to_barbarousshore_outpost_path = [
     (-13358, 18139),
 ]
 
-# 3) Segments
 _3_camphojanu_to_barbarousshore_segments = [
     {
-        "map_id": 375,
+        "map_id": MapID.BarbarousShore,
         "path": [
             (-12830.000000, 17372.000000),
             (-8728.307617, 13590.430664),
@@ -36,7 +33,7 @@ _3_camphojanu_to_barbarousshore_segments = [
         ],
     },
     {
-        "map_id": 375,
+        "map_id": MapID.BarbarousShore,
         "path": [],  # no further walking once you arrive
     },
 ]

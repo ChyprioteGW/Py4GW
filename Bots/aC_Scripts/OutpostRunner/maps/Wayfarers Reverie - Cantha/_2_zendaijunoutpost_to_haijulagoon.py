@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _2_zendaijunoutpost_to_haijulagoon_ids = {
-    "outpost_id": 213,
+    "outpost_id": MapID.ZenDaijunOutpost,
 }
 
-# 2) Outpost exit path
 _2_zendaijunoutpost_to_haijulagoon_outpost_path = [
     (18255, 11594),
     (18729, 12534),
@@ -13,10 +11,9 @@ _2_zendaijunoutpost_to_haijulagoon_outpost_path = [
     (19225, 14513),
 ]
 
-# 3) Segments
 _2_zendaijunoutpost_to_haijulagoon_segments = [
     {
-        "map_id": 237,
+        "map_id": MapID.HaijuLagoon,
         "path": [
             (17409, -20918),
             (15890, -19609),
@@ -40,7 +37,7 @@ _2_zendaijunoutpost_to_haijulagoon_segments = [
         ],
     },
     {
-        "map_id": 237,
+        "map_id": MapID.HaijuLagoon,
         "path": [],  # no further walking once you arrive
     },
 ]

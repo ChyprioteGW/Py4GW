@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_sunspeargreathall_to_championsdawn_ids = {
-    "outpost_id": 431,
+    "outpost_id": MapID.SunspearGreatHall,
 }
 
-# 2) Outpost exit path
 _3_sunspeargreathall_to_championsdawn_outpost_path = [
     (-3124, 4602),
     (-3102, 3602),
 ]
 
-# 3) Segments
 _3_sunspeargreathall_to_championsdawn_segments = [
     {
-        "map_id": 430,
+        "map_id": MapID.PlainsOfJarin,
         "path": [
             (-3080, 3328),
             (-3742, 1354),
@@ -33,7 +30,7 @@ _3_sunspeargreathall_to_championsdawn_segments = [
         ],
     },
     {
-        "map_id": 479,
+        "map_id": MapID.ChampionsDawn,
         "path": [],  # no further walking once you arrive
     },
 ]

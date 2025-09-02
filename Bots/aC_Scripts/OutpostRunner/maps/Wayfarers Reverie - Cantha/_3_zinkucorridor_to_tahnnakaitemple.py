@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_zinkucorridor_to_tahnnakaitemple_ids = {
-    "outpost_id": 284,
+    "outpost_id": MapID.ZinKuCorridor,
 }
 
-# 2) Outpost exit path
 _3_zinkucorridor_to_tahnnakaitemple_outpost_path = [
     (8473, -18234),
     (7516, -17849),
@@ -17,10 +15,9 @@ _3_zinkucorridor_to_tahnnakaitemple_outpost_path = [
     (2717, -15753),
 ]
 
-# 3) Segments
 _3_zinkucorridor_to_tahnnakaitemple_segments = [
     {
-        "map_id": 269,
+        "map_id": MapID.TahnnakaiTempleExplorable,
         "path": [
             (2845, -15259),
             (2820, -13228),
@@ -30,7 +27,7 @@ _3_zinkucorridor_to_tahnnakaitemple_segments = [
         ],
     },
     {
-        "map_id": 269,
+        "map_id": MapID.TahnnakaiTempleExplorable,
         "path": [],  # no further walking once you arrive
     },
 ]

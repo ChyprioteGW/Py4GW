@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_templeoftheages_to_kessexpeak_ids = {
-    "outpost_id": 138,
+    "outpost_id": MapID.TempleOfTheAges,
 }
 
-# 2) Outpost exit path
 _3_templeoftheages_to_kessexpeak_outpost_path = [
     (-5123, 17027),
     (-5187, 15797),
 ]
 
-# 3) Segments
 _3_templeoftheages_to_kessexpeak_segments = [
     {
-        "map_id": 18,
+        "map_id": MapID.TheBlackCurtain,
         "path": [
             (-5205, 15562),
             (-7210, 15113),
@@ -52,7 +49,7 @@ _3_templeoftheages_to_kessexpeak_segments = [
         ],
     },
     {
-        "map_id": 64,
+        "map_id": MapID.KessexPeak,
         "path": [
             (8843, 21933),
             (7039, 21024),
@@ -89,7 +86,7 @@ _3_templeoftheages_to_kessexpeak_segments = [
         ],
     },
     {
-        "map_id": 64,
+        "map_id": MapID.KessexPeak,
         "path": [],  # no further walking once you arrive
     },
 ]

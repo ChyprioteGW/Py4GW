@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _2_grendichcourthouse_to_flametemplecorridor_ids = {
-    "outpost_id": 36,
+    "outpost_id": MapID.GrendichCourthouse,
 }
 
-# 2) Outpost exit path
 _2_grendichcourthouse_to_flametemplecorridor_outpost_path = [
     (435, 13591),
     (1421, 13852),
     (2387, 14107),
 ]
 
-# 3) Segments
 _2_grendichcourthouse_to_flametemplecorridor_segments = [
     {
-        "map_id": 13,
+        "map_id": MapID.DiessaLowlands,
         "path": [
             (3093, 13016),
             (3975, 14840),
@@ -33,7 +30,7 @@ _2_grendichcourthouse_to_flametemplecorridor_segments = [
         ],
     },
     {
-        "map_id": 106,
+        "map_id": MapID.FlameTempleCorridor,
         "path": [
             (-18633, -12862),
             (-18547, -10814),
@@ -51,7 +48,7 @@ _2_grendichcourthouse_to_flametemplecorridor_segments = [
         ],
     },
     {
-        "map_id": 106,
+        "map_id": MapID.FlameTempleCorridor,
         "path": [],  # no further walking once you arrive
     },
 ]

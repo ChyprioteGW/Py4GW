@@ -1,18 +1,16 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _8_pikensquare_to_ascaloncity_ids = {
-    "outpost_id": outpost_name_to_id["Piken Square"],
+    "outpost_id": MapID.PikenSquare,
 }
-# 2) Outpost exit path
+
 _8_pikensquare_to_ascaloncity_outpost_path = [
     (20238, 7794),
     (20235, 7654),
 ]
-# 3) Segments
 _8_pikensquare_to_ascaloncity_segments = [
     {
-        "map_id": explorable_name_to_id["The Breach"],
+        "map_id": MapID.TheBreach,
         "path": [          
             (20763.0, 5908.0),
             (20946.0, 5000.0),
@@ -46,7 +44,7 @@ _8_pikensquare_to_ascaloncity_segments = [
     },
 
     {
-        "map_id": explorable_name_to_id["Old Ascalon"],
+        "map_id": MapID.OldAscalon,
         "path": [
             (-18265.0, 18086.0),
             (-14989.0, 15879.0),
@@ -73,7 +71,7 @@ _8_pikensquare_to_ascaloncity_segments = [
     },
 
     {
-        "map_id": outpost_name_to_id["Ascalon City"],
+        "map_id": MapID.AscalonCity,
         "path": [],
     },
 ]

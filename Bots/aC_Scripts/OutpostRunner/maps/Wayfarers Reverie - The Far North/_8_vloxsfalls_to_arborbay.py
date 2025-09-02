@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _8_vloxsfalls_to_arborbay_ids = {
-    "outpost_id": 624,
+    "outpost_id": MapID.VloxsFalls,
 }
 
-# 2) Outpost exit path
 _8_vloxsfalls_to_arborbay_outpost_path = [
     (16143, 14059),
     (15750, 13101),
     (15435, 12349),
 ]
 
-# 3) Segments
 _8_vloxsfalls_to_arborbay_segments = [
     {
-        "map_id": 485,
+        "map_id": MapID.ArborBay,
         "path": [
             (15381, 12281),
             (13734, 11132),
@@ -39,7 +36,7 @@ _8_vloxsfalls_to_arborbay_segments = [
         ],
     },
     {
-        "map_id": 485,
+        "map_id": MapID.ArborBay,
         "path": [],  # no further walking once you arrive
     },
 ]

@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _4_beetletun_to_divinitycoast_ids = {
-    "outpost_id": outpost_name_to_id["Beetletun"],
+    "outpost_id": MapID.Beetletun,
 }
 
-# 2) Outpost exit path
 _4_beetletun_to_divinitycoast_outpost_path = [
     (17636, -10144),
     (17425, -9933),
 ]
 
-# 3) Segments
 _4_beetletun_to_divinitycoast_segments = [
     {
-        "map_id": explorable_name_to_id["Watchtower Coast"],
+        "map_id": MapID.WatchtowerCoast,
         "path": [
             (14746.0, -6604.0),
             (12251.0, -4646.0),
@@ -43,7 +40,7 @@ _4_beetletun_to_divinitycoast_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Divinity Coast outpost"],
+        "map_id": MapID.DivinityCoastOutpost,
         "path": [],  # no further walking once you arrive
     },
 ]

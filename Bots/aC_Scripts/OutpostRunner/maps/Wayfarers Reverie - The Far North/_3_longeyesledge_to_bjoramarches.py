@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _3_longeyesledge_to_bjoramarches_ids = {
-    "outpost_id": 650,
+    "outpost_id": MapID.LongeyesLedge,
 }
 
-# 2) Outpost exit path
 _3_longeyesledge_to_bjoramarches_outpost_path = [
     (-24897, 15360),
     (-25798, 15873),
     (-26622, 16274),
 ]
 
-# 3) Segments
 _3_longeyesledge_to_bjoramarches_segments = [
     {
-        "map_id": 482,
+        "map_id": MapID.BjoraMarches,
         "path": [
             (18184.009766, -17519.433594),
             (16278.378906, -13816.135742),
@@ -32,7 +29,7 @@ _3_longeyesledge_to_bjoramarches_segments = [
         ],
     },
     {
-        "map_id": 482,
+        "map_id": MapID.BjoraMarches,
         "path": [],  # no further walking once you arrive
     },
 ]

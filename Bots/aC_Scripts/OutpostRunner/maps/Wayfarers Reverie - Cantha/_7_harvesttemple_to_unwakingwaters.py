@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _7_harvesttemple_to_unwakingwaters_ids = {
-    "outpost_id": 277,
+    "outpost_id": MapID.HarvestTemple,
 }
 
-# 2) Outpost exit path
 _7_harvesttemple_to_unwakingwaters_outpost_path = [
     (3378, 2747),
     (3320, 2010),
 ]
 
-# 3) Segments
 _7_harvesttemple_to_unwakingwaters_segments = [
     {
-        "map_id": 227,
+        "map_id": MapID.UnwakingWatersLuxon,
         "path": [
             (3453, 1956),
             (4620, 3601),
@@ -39,7 +36,7 @@ _7_harvesttemple_to_unwakingwaters_segments = [
         ],
     },
     {
-        "map_id": 227,
+        "map_id": MapID.UnwakingWatersLuxon,
         "path": [],  # no further walking once you arrive
     },
 ]

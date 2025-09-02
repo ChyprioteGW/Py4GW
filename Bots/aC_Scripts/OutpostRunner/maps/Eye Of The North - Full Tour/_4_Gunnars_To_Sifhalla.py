@@ -1,11 +1,7 @@
-# maps/EOTN/_4_gunnars_to_sifhalla.py
+from Py4GWCoreLib.enums import MapID
 
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
-
-# 1) IDs
 _4_gunnars_to_sifhalla_ids = {
-    # Teleport to Gunnar’s Hold (644)
-    "outpost_id": outpost_name_to_id["Gunnar's Hold"],
+    "outpost_id": MapID.GunnarsHold,
 }
 
 # 2) Exit path from outpost 644
@@ -14,11 +10,9 @@ _4_gunnars_to_sifhalla_outpost_path = [
     (15193.037109, -6387.140625),  # into Norrhart Domains
 ]
 
-# 3) Explorable segments
 _4_gunnars_to_sifhalla_segments = [
     {
-        # Norrhart Domains (ID 548)
-        "map_id": explorable_name_to_id["Norrhart Domains"],
+        "map_id": MapID.NorrhartDomains,
         "path": [
             (13337.167968, -3869.252929),
             ( 9826.771484,   416.337768),
@@ -36,8 +30,7 @@ _4_gunnars_to_sifhalla_segments = [
         ],
     },
     {
-        # Drakkar Lake (ID 513)
-        "map_id": explorable_name_to_id["Drakkar Lake"],
+        "map_id": MapID.DrakkarLake,
         "path": [
             (14399.201171, -16963.455078),
             (12510.431640, -13414.477539),
@@ -53,8 +46,7 @@ _4_gunnars_to_sifhalla_segments = [
         ],
     },
     {
-        # Sifhalla (final outpost, ID 643)
-        "map_id": outpost_name_to_id["Sifhalla"],
+        "map_id": MapID.Sifhalla,
         "path": [],  # no further walking once you arrive
     },
 ]

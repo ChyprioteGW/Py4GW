@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _6_templeoftheages_to_fishermenshaven_ids = {
-    "outpost_id": 138,
+    "outpost_id": MapID.TempleOfTheAges,
 }
 
-# 2) Outpost exit path
 _6_templeoftheages_to_fishermenshaven_outpost_path = [
     (-4908, 17096),
     (-5198, 16120),
     (-5483, 15161),
 ]
 
-# 3) Segments
 _6_templeoftheages_to_fishermenshaven_segments = [
     {
-        "map_id": 18,
+        "map_id": MapID.TheBlackCurtain,
         "path": [
             (-5285, 15637),
             (-7239, 15094),
@@ -34,7 +31,7 @@ _6_templeoftheages_to_fishermenshaven_segments = [
         ],
     },
     {
-        "map_id": 17,
+        "map_id": MapID.TalmarkWilderness,
         "path": [
             (18675, 769),
             (17235, 2174),
@@ -57,7 +54,7 @@ _6_templeoftheages_to_fishermenshaven_segments = [
         ],
     },
     {
-        "map_id": 53,
+        "map_id": MapID.TearsOfTheFallen,
         "path": [
             (7227, 7487),
             (4721, 6408),
@@ -69,7 +66,7 @@ _6_templeoftheages_to_fishermenshaven_segments = [
         ],
     },
     {
-        "map_id": 63,
+        "map_id": MapID.StingrayStrand,
         "path": [
             (-12191, 20782),
             (-10845, 18975),
@@ -81,7 +78,7 @@ _6_templeoftheages_to_fishermenshaven_segments = [
         ],
     },
     {
-        "map_id": 137,
+        "map_id": MapID.FishermensHaven,
         "path": [],
     },
 ]

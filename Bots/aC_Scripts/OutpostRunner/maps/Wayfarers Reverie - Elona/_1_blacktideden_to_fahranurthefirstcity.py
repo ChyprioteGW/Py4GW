@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _1_blacktideden_to_fahranurthefirstcity_ids = {
-    "outpost_id": 492,
+    "outpost_id": MapID.BlacktideDenOutpost,
 }
 
-# 2) Outpost exit path
 _1_blacktideden_to_fahranurthefirstcity_outpost_path = [
     (-1214, 2013),
     (-2108, 2555),
@@ -15,10 +13,9 @@ _1_blacktideden_to_fahranurthefirstcity_outpost_path = [
     (-4963, 5329),
 ]
 
-# 3) Segments
 _1_blacktideden_to_fahranurthefirstcity_segments = [
     {
-        "map_id": 481,
+        "map_id": MapID.FahranurTheFirstCity,
         "path": [
             (19319.363281, -18627.406250),
             (18148.845703, -18133.919922),
@@ -47,7 +44,7 @@ _1_blacktideden_to_fahranurthefirstcity_segments = [
         ],
     },
     {
-        "map_id": 481,
+        "map_id": MapID.FahranurTheFirstCity,
         "path": [],  # no further walking once you arrive
     },
 ]

@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _6_ratasum_to_rivenearth_ids = {
-    "outpost_id": 640,
+    "outpost_id": MapID.RataSum,
 }
 
-# 2) Outpost exit path
 _6_ratasum_to_rivenearth_outpost_path = [
     (19948, 16851),
     (20332, 16845),
 ]
 
-# 3) Segments
 _6_ratasum_to_rivenearth_segments = [
     {
-        "map_id": 501,
+        "map_id": MapID.RivenEarth,
         "path": [
             (-25000, -3996),
             (-23845, -2283),
@@ -30,7 +27,7 @@ _6_ratasum_to_rivenearth_segments = [
         ],
     },
     {
-        "map_id": 501,
+        "map_id": MapID.RivenEarth,
         "path": [],  # no further walking once you arrive
     },
 ]

@@ -1,11 +1,9 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _7_lairoftheforgotten_to_poisonedoutcrops_ids = {
-    "outpost_id": 442,
+    "outpost_id": MapID.LairOfTheForgotten,
 }
 
-# 2) Outpost exit path
 _7_lairoftheforgotten_to_poisonedoutcrops_outpost_path = [
     (704, 989),
     (-217, 1538),
@@ -18,10 +16,9 @@ _7_lairoftheforgotten_to_poisonedoutcrops_outpost_path = [
     (3586, 5300),
 ]
 
-# 3) Segments
 _7_lairoftheforgotten_to_poisonedoutcrops_segments = [
     {
-        "map_id": 443,
+        "map_id": MapID.PoisonedOutcrops,
         "path": [
             (15909.529297, -9761.580078),
             (14973.930664, -7700.502441),
@@ -52,7 +49,7 @@ _7_lairoftheforgotten_to_poisonedoutcrops_segments = [
         ],
     },
     {
-        "map_id": 443,
+        "map_id": MapID.PoisonedOutcrops,
         "path": [],  # no further walking once you arrive
     },
 ]

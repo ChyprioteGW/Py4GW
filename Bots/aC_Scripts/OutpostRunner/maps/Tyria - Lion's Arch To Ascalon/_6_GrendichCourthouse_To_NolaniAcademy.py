@@ -1,19 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _6_grendichcourthouse_to_nolaniacademy_ids = {
-    "outpost_id": outpost_name_to_id["Grendich Courthouse"],
+    "outpost_id": MapID.GrendichCourthouse,
 }
-# 2) Outpost exit path (Ascalon City)
+
 _6_grendichcourthouse_to_nolaniacademy_outpost_path = [
     (1686, 13755),
     (1900, 13600),
 ]
-# 3) Segments
 _6_grendichcourthouse_to_nolaniacademy_segments = [
     {
         # "Diessa Lowlands" explorable
-        "map_id": explorable_name_to_id["Diessa Lowlands"],
+        "map_id": MapID.DiessaLowlands,
         "path": [          
             (2172.0, 9693.0),
             (-132.0, 6987.0),
@@ -41,7 +39,7 @@ _6_grendichcourthouse_to_nolaniacademy_segments = [
 
     {
         # "Nolani Academy outpost" outpost
-        "map_id": outpost_name_to_id["Nolani Academy outpost"],
+        "map_id": MapID.NolaniAcademyOutpost,
         "path": [],  # no further walking once you arrive
     },
 ]

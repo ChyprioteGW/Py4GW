@@ -1,21 +1,18 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _2_thewildsoutpost_to_druidsoverlook_ids = {
-    "outpost_id": 11,
+    "outpost_id": MapID.TheWildsOutpost,
 }
 
-# 2) Outpost exit path
 _2_thewildsoutpost_to_druidsoverlook_outpost_path = [
     (25132, -11542),
     (26149, -11447),
     (26542, -11438),
 ]
 
-# 3) Segments
 _2_thewildsoutpost_to_druidsoverlook_segments = [
     {
-        "map_id": 41,
+        "map_id": MapID.SageLands,
         "path": [
             (-16205, 10186),
             (-14207, 9937),
@@ -38,7 +35,7 @@ _2_thewildsoutpost_to_druidsoverlook_segments = [
         ],
     },
     {
-        "map_id": 140,
+        "map_id": MapID.DruidsOverlook,
         "path": [],  # no further walking once you arrive
     },
 ]

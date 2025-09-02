@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _6_ventarisrefuge_to_thefalls_ids = {
-    "outpost_id": 139,
+    "outpost_id": MapID.VentarisRefuge,
 }
 
-# 2) Outpost exit path
 _6_ventarisrefuge_to_thefalls_outpost_path = [
     (-14596, 773),
     (-15310, 191),
 ]
 
-# 3) Segments
 _6_ventarisrefuge_to_thefalls_segments = [
     {
-        "map_id": 44,
+        "map_id": MapID.EttinsBack,
         "path": [
             (-15468, 182),
             (-17165, -879),
@@ -32,7 +29,7 @@ _6_ventarisrefuge_to_thefalls_segments = [
         ],
     },
     {
-        "map_id": 45,
+        "map_id": MapID.ReedBog,
         "path": [
             (7336, 6852),
             (6619, 4984),
@@ -51,7 +48,7 @@ _6_ventarisrefuge_to_thefalls_segments = [
         ],
     },
     {
-        "map_id": 46,
+        "map_id": MapID.TheFalls,
         "path": [
             (17974, 3713),
             (16659, 2195),
@@ -103,7 +100,7 @@ _6_ventarisrefuge_to_thefalls_segments = [
         ],
     },
     {
-        "map_id": 46,
+        "map_id": MapID.TheFalls,
         "path": [],  # no further walking once you arrive
     },
 ]

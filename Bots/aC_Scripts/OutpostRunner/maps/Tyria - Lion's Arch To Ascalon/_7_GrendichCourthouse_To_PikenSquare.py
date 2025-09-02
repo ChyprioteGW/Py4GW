@@ -1,19 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _7_grendichcourthouse_to_pikensquare_ids = {
-    "outpost_id": outpost_name_to_id["Grendich Courthouse"],
+    "outpost_id": MapID.GrendichCourthouse,
 }
-# 2) Outpost exit path (Yaks Bend)
+
 _7_grendichcourthouse_to_pikensquare_outpost_path = [
     (1686, 13755),
     (1900, 13600),
 ]
-# 3) Segments
 _7_grendichcourthouse_to_pikensquare_segments = [
     {
         # "Diessa Lowlands" explorable
-        "map_id": explorable_name_to_id["Diessa Lowlands"],
+        "map_id": MapID.DiessaLowlands,
         "path": [          
             (2917.0, 11657.0),
             (2326.0, 10173.0),
@@ -45,7 +43,7 @@ _7_grendichcourthouse_to_pikensquare_segments = [
 
     {
         # "The Breach" explorable
-        "map_id": explorable_name_to_id["The Breach"],
+        "map_id": MapID.TheBreach,
         "path": [
             (-17855.0, 3711.0),
             (-15757.0, 4064.0),
@@ -80,7 +78,7 @@ _7_grendichcourthouse_to_pikensquare_segments = [
 
     {
         # "Piken Square" outpost
-        "map_id": outpost_name_to_id["Piken Square"],
+        "map_id": MapID.PikenSquare,
         "path": [],  # no further walking once you arrive
     },
 ]

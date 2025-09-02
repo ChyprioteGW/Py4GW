@@ -1347,285 +1347,946 @@ TITLE_NAME = {
 # endregion
 # region Outpost Names
 
+# region Maps
+class MapID(IntEnum):
+    GHWarriorsIsle = 4
+    GHHuntersIsle = 5
+    GHWizardsIsle = 6
+    WarriorsIsleExplorable = 7
+    HuntersIsleExplorable = 8
+    WizardsIsleExplorable = 9
+    BloodstoneFenOutpost = 10
+    TheWildsOutpost = 11
+    AuroraGladeOutpost = 12
+    DiessaLowlands = 13
+    GatesOfKrytaOutpost = 14
+    DalessioSeaboardOutpost = 15
+    DivinityCoastOutpost = 16
+    TalmarkWilderness = 17
+    TheBlackCurtain = 18
+    SanctumCayOutpost = 19
+    DroknarsForge = 20
+    TheFrostGateOutpost = 21
+    IceCavesOfSorrowOutpost = 22
+    ThunderheadKeepOutpost = 23
+    IronMinesOfMoladuneOutpost = 24
+    BorlisPassOutpost = 25
+    TalusChute = 26
+    GriffonsMouth = 27
+    TheGreatNorthernWallOutpost = 28
+    FortRanikOutpost = 29
+    RuinsOfSurmiaOutpost = 30
+    XaquangSkyway = 31
+    NolaniAcademyOutpost = 32
+    OldAscalon = 33
+    TheFissureOfWoe = 34
+    EmberLightCamp = 35
+    GrendichCourthouse = 36
+    GlintChallenge = 37
+    AuguryRockOutpost = 38
+    SardelacSanitarium = 39
+    PikenSquare = 40
+    SageLands = 41
+    MamnoonLagoon = 42
+    Silverwood = 43
+    EttinsBack = 44
+    ReedBog = 45
+    TheFalls = 46
+    DryTop = 47
+    TangleRoot = 48
+    HengeOfDenravi = 49
+    SenjisCorner = 51
+    GHBurningIsle = 52
+    TearsOfTheFallen = 53
+    ScoundrelsRise = 54
+    LionsArch = 55
+    CursedLands = 56
+    BergenHotSprings = 57
+    NorthKrytaProvince = 58
+    NeboTerrace = 59
+    MajestysRest = 60
+    TwinSerpentLakes = 61
+    WatchtowerCoast = 62
+    StingrayStrand = 63
+    KessexPeak = 64
+    DalessioArena = 65
+    BurningIsleExplorable = 67
+    FrozenIsleExplorable = 68
+    NomadsIsleExplorable = 69
+    DruidsIsleExplorable = 70
+    IsleOfTheDeadExplorable = 71
+    TheUnderworld1 = 72
+    RiversideProvinceOutpost = 73
+    TheHallOfHeroesArena = 75
+    BrokenTowerArena = 76
+    HouseZuHeltzer = 77
+    TheCourtyardArena = 78
+    UnholyTemplesArena = 79
+    BurialMoundsArena = 80
+    AscalonCity = 81
+    TombOfThePrimevalKings = 82
+    TheVaultArena = 83
+    TheUnderworldArena = 84
+    AscalonArenaOutpost = 85
+    SacredTemplesArena = 86
+    Icedome = 87
+    IronHorseMine = 88
+    AnvilRock = 89
+    LornarsPass = 90
+    SnakeDance = 91
+    TascasDemise = 92
+    SpearheadPeak = 93
+    IceFloe = 94
+    WitmansFolly = 95
+    MineralSprings = 96
+    DreadnoughtsDrift = 97
+    FrozenForest = 98
+    TravelersVale = 99
+    DeldrimorBowl = 100
+    RegentValley = 101
+    TheBreach = 102
+    AscalonFoothills = 103
+    PockmarkFlats = 104
+    DragonsGullet = 105
+    FlameTempleCorridor = 106
+    EasternFrontier = 107
+    TheScar = 108
+    TheAmnoonOasis = 109
+    DivinersAscent = 110
+    VultureDrifts = 111
+    TheAridSea = 112
+    ProphetsPath = 113
+    SaltFlats = 114
+    SkywardReach = 115
+    DunesOfDespairOutpost = 116
+    ThirstyRiverOutpost = 117
+    ElonaReachOutpost = 118
+    AuguryRockMission = 119
+    TheDragonsLairOutpost = 120
+    PerditionRock = 121
+    RingOfFireOutpost = 122
+    AbaddonsMouthOutpost = 123
+    HellsPrecipiceOutpost = 124
+    GoldenGates = 126
+    ScarredEarth1 = 127
+    TheEternalGroveExplorable = 128
+    LutgardisConservatory = 129
+    VasburgArmory = 130
+    SerenityTemple = 131
+    IceToothCave = 132
+    BeaconsPerch = 133
+    YaksBend = 134
+    FrontierGate = 135
+    Beetletun = 136
+    FishermensHaven = 137
+    TempleOfTheAges = 138
+    VentarisRefuge = 139
+    DruidsOverlook = 140
+    MaguumaStade = 141
+    QuarrelFalls = 142
+    GyalaHatcheryExplorable = 144
+    TheCatacombs = 145
+    LakesideCounty = 146
+    TheNorthlands = 147
+    AscalonCityOutpost = 148
+    AscalonAcademy = 149
+    AscalonAcademyPvpBattle = 150
+    AscalonAcademy2 = 151
+    HeroesAudience = 152
+    SeekersPassage = 153
+    DestinysGorge = 154
+    CampRankor = 155
+    TheGraniteCitadel = 156
+    MarhansGrotto = 157
+    PortSledge = 158
+    CopperhammerMines = 159
+    GreenHillsCounty = 160
+    WizardsFolly = 161
+    PresearingRegentValley = 162
+    PresearingTheBarradinEstate = 163
+    PresearingAshfordAbbey = 164
+    PresearingFoiblesFair = 165
+    PresearingFortRanik = 166
+    BurningIsle = 167
+    DruidsIsle = 168
+    FrozenIsle = 170
+    WarriorsIsle = 171
+    HuntersIsle = 172
+    WizardsIsle = 173
+    NomadsIsle = 174
+    IsleOfTheDead = 175
+    GHFrozenIsle = 176
+    GHNomadsIsle = 177
+    GHDruidsIsle = 178
+    GHIsleOfTheDead = 179
+    FortKoga1 = 180
+    ShiverpeakArenaOutpost = 181
+    AmnoonArena = 182
+    DeldrimorArena = 183
+    TheCrag = 184
+    RandomArenasOutpost = 188
+    TeamArenasOutpost = 189
+    SorrowsFurnace = 190
+    GrenthsFootprint = 191
+    Cavalon = 193
+    KainengCenter = 194
+    DrazachThicket = 195
+    JayaBluffs = 196
+    ShenzunTunnels = 197
+    Archipelagos = 198
+    MaishangHills = 199
+    MountQinkai = 200
+    MelandrusHope = 201
+    RheasCrater = 202
+    SilentSurf = 203
+    UnwakingWatersKurzickMission = 204
+    MorostavTrail = 205
+    DeldrimorWarCamp = 206
+    HeroesCrypt1 = 208
+    MourningVeilFalls = 209
+    Ferndale = 210
+    PongmeiValley = 211
+    MonasteryOverlook = 212
+    ZenDaijunOutpost = 213
+    MinisterChosEstateOutpost = 214
+    VizunahSquare = 215
+    NahpuiQuarterOutpost = 216
+    TahnnakaiTempleOutpost = 217
+    ArborstoneOutpost = 218
+    BoreasSeabedOutpost = 219
+    SunjiangDistrictOutpost = 220
+    FortAspenwood = 221
+    TheEternalGroveOutpost = 222
+    TheJadeQuarry = 223
+    GyalaHatcheryOutpost = 224
+    RaisuPalaceOutpost = 225
+    ImperialSanctumOutpost = 226
+    UnwakingWatersLuxon = 227
+    GrenzFrontier = 228
+    AmatzBasinExplorable = 230
+    AmatzBasinOutpost = 230
+    ShadowsPassage = 232
+    RaisuPalaceMission = 233
+    TheAuriosMinesOutpost = 234
+    PanjiangPeninsula = 235
+    KinyaProvince = 236
+    HaijuLagoon = 237
+    SunquaVale = 238
+    WajjunBazaar = 239
+    BukdekByway = 240
+    TheUndercity = 241
+    ShingJeaMonastery = 242
+    ShingJeaArenaOutpost = 243
+    ArborstoneExplorable = 244
+    MinisterChosEstateExplorable = 245
+    ZenDaijunExplorable = 246
+    BoreasSeabedExplorable = 247
+    GreatTempleOfBalthazar = 248
+    TsumeiVillage = 249
+    SeitungHarbor = 250
+    RanMusuGardens = 251
+    LinnokCourtyard = 252
+    DwaynaVsGrenthOutpost = 253
+    SunjiangDistrictExplorable = 256
+    NahpuiQuarterExplorable = 265
+    UrgozsWarrenOutpost = 266
+    TahnnakaiTempleExplorable = 269
+    AltrummRuinsOutpost = 272
+    ZosShivrosChannelOutpost = 273
+    DragonsThroatOutpost = 274
+    GHIsleOfWeepingStone = 275
+    GHIsleOfJade = 276
+    HarvestTemple = 277
+    BreakerHollow = 278
+    LeviathanPits = 279
+    IsleOfTheNameless1 = 280
+    ZaishenChallengeOutpost = 281
+    ZaishenEliteOutpost = 282
+    MaatuKeep = 283
+    ZinKuCorridor = 284
+    MonasteryOverlook2 = 285
+    BrauerAcademy = 286
+    DurheimArchives = 287
+    BaiPaasuReach = 288
+    SeafarersRest = 289
+    BejunkanPier = 290
+    VizunahSquareLocalQuarter = 291
+    VizunahSquareForeignQuarter = 292
+    FortAspenwoodLuxon = 293
+    FortAspenwoodKurzick = 294
+    TheJadeQuarryLuxon = 295
+    TheJadeQuarryKurzick = 296
+    UnwakingWatersLuxonMission = 297
+    UnwakingWatersKurzick = 298
+    EtnaranKeys = 300
+    RaisuPavillion = 301
+    KainengDocks = 302
+    TheMarketplace = 303
+    TheDeepOutpost = 307
+    AscalonArena = 308
+    Annihilation = 309
+    KillCountTraining = 310
+    Annihilation2 = 311
+    ObeliskAnnihilationTraining = 312
+    SaoshangTrail = 313
+    ShiverpeakArena1 = 314
+    DalessioArena2 = 318
+    AmnoonArena1 = 319
+    FortKoga2 = 320
+    HeroesCrypt2 = 321
+    ShiverpeakArena2 = 322
+    SaltsprayBeachLuxon = 328
+    SaltsprayBeachKurzick = 329
+    HeroesAscentOutpost = 330
+    GrenzFrontierLuxon = 331
+    GrenzFrontierKurzick = 332
+    TheAncestralLandsLuxon = 333
+    TheAncestralLandsKurzick = 334
+    EtnaranKeysLuxon = 335
+    EtnaranKeysKurzick = 336
+    KaanaiCanyonLuxon = 337
+    KaanaiCanyonKurzick = 338
+    DalessioArena3 = 339
+    AmnoonArena2 = 340
+    FortKoga3 = 341
+    HeroesCrypt3 = 342
+    ShiverpeakArena3 = 343
+    TheHallOfHeroes = 344
+    TheCourtyard = 345
+    ScarredEarth2 = 346
+    TheUnderworldExplorable = 347
+    TanglewoodCopse = 348
+    SaintAnjekasShrine = 349
+    EredonTerrace = 350
+    DivinePath = 351
+    BrawlersPit = 352
+    PetrifiedArena = 353
+    SeabedArena = 354
+    GHImperialIsle = 359
+    GHIsleOfMeditation = 360
+    IsleOfWeepingStoneExplorable = 361
+    IsleOfJadeExplorable = 362
+    ImperialIsleExplorable = 363
+    IsleOfMeditationExplorable = 364
+    ShingJeaArena = 366
+    DragonArenaOutpost = 368
+    JahaiBluffs = 369
+    MargaCoast = 371
+    SunwardMarches = 373
+    BarbarousShore = 375
+    CampHojanu = 376
+    BahdokCaverns = 377
+    WehhanTerraces = 378
+    DejarinEstate = 379
+    ArkjokWard = 380
+    YohlonHaven = 381
+    GandaraTheMoonFortress = 382
+    TheFloodplainOfMahnkelon = 384
+    LionsArchDuringSunspearsInKryta = 385
+    TuraisProcession = 386
+    SunspearSanctuary = 387
+    AspenwoodGateKurzick = 388
+    AspenwoodGateLuxon = 389
+    JadeFlatsKurzick = 390
+    JadeFlatsLuxon = 391
+    YatendiCanyons = 392
+    ChantryOfSecrets = 393
+    GardenOfSeborhin = 394
+    HoldingsOfChokhin = 395
+    MihanuTownship = 396
+    VehjinMines = 397
+    BasaltGrotto = 398
+    ForumHighlands = 399
+    KainengCenterDuringSunspearsInCantha = 400
+    ResplendentMakuun = 402
+    HonurHill = 403
+    WildernessOfBahdza = 404
+    VehtendiValley = 406
+    YahnurMarket = 407
+    TheHiddenCityOfAhdashim = 413
+    TheKodashBazaar = 414
+    LionsGate = 415
+    TheMirrorOfLyss = 419
+    SecureTheRefuge = 420
+    VentaCemeteryOutpost = 421
+    BadTideRisingKamadanExplorable = 422
+    TheTribunal = 423
+    KodonurCrossroadsOutpost = 424
+    RilohnRefugeOutpost = 425
+    PogahnPassageOutpost = 426
+    ModdokCreviceOutpost = 427
+    TiharkOrchardOutpost = 428
+    Consulate = 429
+    PlainsOfJarin = 430
+    SunspearGreatHall = 431
+    CliffsOfDohjok = 432
+    DzagonurBastionOutpost = 433
+    DashaVestibuleOutpost = 434
+    GrandCourtOfSebelkehOutpost = 435
+    CommandPost = 436
+    JokosDomain = 437
+    BonePalace = 438
+    TheRupturedHeart = 439
+    TheMouthOfTorment = 440
+    TheShatteredRavines = 441
+    LairOfTheForgotten = 442
+    PoisonedOutcrops = 443
+    TheSulfurousWastes = 444
+    TheEbonyCitadelOfMallyx = 445
+    TheAlkaliPan = 446
+    ALandOfHeroes = 447
+    CrystalOverlook = 448
+    KamadanJewelOfIstan = 449
+    GateOfTorment = 450
+    NightfallenGarden = 455
+    ChuurhirFields = 456
+    BeknurHarbor1 = 457
+    TheUnderworld2 = 461
+    HeartOfAbaddon = 462
+    TheUnderworld3 = 463
+    NightfallenJahai = 465
+    DepthsOfMadness = 466
+    RollerbeetleRacingOutpost = 467
+    DomainOfFear = 468
+    GateOfFear = 469
+    DomainOfPain = 470
+    BloodstoneFenExplorable = 471
+    DomainOfSecrets = 472
+    GateOfSecrets = 473
+    DomainOfAnguish = 474
+    JennursHordeOutpost = 476
+    NunduBayOutpost = 477
+    GateOfDesolationOutpost = 478
+    ChampionsDawn = 479
+    RuinsOfMorahOutpost = 480
+    FahranurTheFirstCity = 481
+    BjoraMarches = 482
+    ZehlonReach = 483
+    LahtedaBog = 484
+    ArborBay = 485
+    IssnurIsles = 486
+    BeknurHarbor = 487
+    MehtaniKeys = 488
+    KodlonuHamlet = 489
+    IslandOfShehkah = 490
+    JokanurDiggingsOutpost = 491
+    BlacktideDenOutpost = 492
+    ConsulateDocksOutpost = 493
+    GateOfPainOutpost = 494
+    GateOfMadnessOutpost = 495
+    AbaddonsGateOutpost = 496
+    SunspearArenaOutpost = 497
+    IceCliffChasms = 499
+    BokkaAmphitheatre = 500
+    RivenEarth = 501
+    TheAstralarium = 502
+    ThroneOfSecrets = 503
+    ChurranuIslandArena = 504
+    ShingJeaMonasteryMission = 505
+    HaijuLagoonMission = 506
+    JayaBluffsMission = 507
+    SeitungHarborMission = 508
+    TsumeiVillageMission = 509
+    SeitungHarborMission2 = 510
+    TsumeiVillageMission2 = 511
+    DrakkarLake = 513
+    GHUnchartedIsle = 529
+    GHIsleOfWurms = 530
+    UnchartedIsleExplorable = 531
+    IsleOfWurmsExplorable = 532
+    SunspearArena = 536
+    GHCorruptedIsle = 537
+    GHIsleOfSolitude = 538
+    CorruptedIsleExplorable = 539
+    IsleOfSolitudeExplorable = 540
+    SunDocks = 543
+    ChahbekVillageOutpost = 544
+    RemainsOfSahlahjaOutpost = 545
+    JagaMoraine = 546
+    Bombardment = 547
+    NorrhartDomains = 548
+    HeroBattlesOutpost = 549
+    TheBeachhead = 550
+    TheCrossing = 551
+    DesertSands = 552
+    VarajarFells = 553
+    DajkahInletOutpost = 554
+    TheShadowNexusOutpost = 555
+    SparkflySwamp = 558
+    GateOfTheNightfallenLands = 559
+    CathedralOfFlames = 560
+    TheTroubledKeeper = 561
+    VerdantCascades = 566
+    CathedralOfFlamesLvl1 = 567
+    CathedralOfFlamesLvl2 = 568
+    MagusStones = 569
+    CatacombsOfKathandraxLvl1 = 570
+    CatacombsOfKathandraxLvl2 = 571
+    AlcaziaTangle = 572
+    RragarsMenagerieLvl1 = 573
+    RragarsMenagerieLvl2 = 574
+    RragarsMenagerieLvl3 = 575
+    OozaPit = 576
+    SlaversExile = 577
+    OolasLabLvl1 = 578
+    OolasLabLvl2 = 579
+    OolasLabLvl3 = 580
+    ShardsOfOorLvl1 = 581
+    ShardsOfOorLvl2 = 582
+    ShardsOfOorLvl3 = 583
+    ArachnisHauntLvl1 = 584
+    ArachnisHauntLvl2 = 585
+    FetidRiver = 593
+    ForgottenShrines = 596
+    Antechamber = 598
+    VloxenExcavationsLvl1 = 604
+    VloxenExcavationsLvl2 = 605
+    VloxenExcavationsLvl3 = 606
+    HeartOfTheShiverpeaksLvl1 = 607
+    HeartOfTheShiverpeaksLvl2 = 608
+    HeartOfTheShiverpeaksLvl3 = 609
+    BloodstoneCavesLvl1 = 612
+    BloodstoneCavesLvl2 = 613
+    BloodstoneCavesLvl3 = 614
+    BogrootGrowthsLvl1 = 615
+    BogrootGrowthsLvl2 = 616
+    RavensPointLvl1 = 617
+    RavensPointLvl2 = 618
+    RavensPointLvl3 = 619
+    SlaversExileLvl1 = 620
+    SlaversExileLvl2 = 621
+    SlaversExileLvl3 = 622
+    SlaversExileLvl4 = 623
+    VloxsFalls = 624
+    Battledepths = 625
+    SepulchreOfDragrimmarLvl1 = 628
+    SepulchreOfDragrimmarLvl2 = 629
+    FrostmawsBurrowsLvl1 = 630
+    FrostmawsBurrowsLvl2 = 631
+    FrostmawsBurrowsLvl3 = 632
+    FrostmawsBurrowsLvl4 = 633
+    FrostmawsBurrowsLvl5 = 634
+    DarkrimeDelvesLvl1 = 635
+    DarkrimeDelvesLvl2 = 636
+    DarkrimeDelvesLvl3 = 637
+    GaddsEncampment = 638
+    UmbralGrotto = 639
+    RataSum = 640
+    TarnishedHaven = 641
+    EyeOfTheNorthOutpost = 642
+    Sifhalla = 643
+    GunnarsHold = 644
+    Olafstead = 645
+    HallOfMonuments = 646
+    DaladaUplands = 647
+    DoomloreShrine = 648
+    GrothmarWardowns = 649
+    LongeyesLedge = 650
+    SacnothValley = 651
+    CentralTransferChamber = 652
+    CurseOfTheNornbear = 653
+    BloodWashesBlood = 654
+    AGateTooFarLvl1 = 655
+    AGateTooFarLvl2 = 656
+    AGateTooFarLvl3 = 657
+    TheElusiveGolemancerLvl1 = 658
+    TheElusiveGolemancerLvl2 = 659
+    TheElusiveGolemancerLvl3 = 660
+    FindingTheBloodstoneLvl1 = 661
+    FindingTheBloodstoneLvl2 = 662
+    FindingTheBloodstoneLvl3 = 663
+    GeniusOperatedLivingEnchantedManifestation = 664
+    AgainstTheCharr = 665
+    WarbandOfBrothersLvl1 = 666
+    WarbandOfBrothersLvl2 = 667
+    WarbandOfBrothersLvl3 = 668
+    AssaultTheStronghold = 669
+    DestructionsDepthsLvl1 = 670
+    DestructionsDepthsLvl2 = 671
+    DestructionsDepthsLvl3 = 672
+    ATimeForHeroes = 673
+    WarbandTraining = 674
+    BorealStation = 675
+    CatacombsOfKathandrax = 676
+    AttackOfTheNornbear = 678
+    PolymockColiseum = 686
+    PolymockGlacier = 687
+    PolymockCrossing = 688
+    ColdAsIce = 690
+    BeneathLionsArch = 691
+    TunnelsBelowCantha = 692
+    CavernsBelowKamadan = 693
+    ServiceInDefenseOfTheEye = 695
+    ManoANorno = 696
+    ServicePracticeDummy = 697
+    HeroTutorial = 698
+    TheNornFightingTournament = 700
+    SecretLairOfTheSnowmen = 701
+    NornBrawlingChampionship = 702
+    KilroysPunchoutTraining = 703
+    FronisIrontoesLair = 704
+    TheJusticiarsEnd = 705
+    TheGreatNornAlemoot = 707
+    VarajarFells2 = 708
+    Epilogue = 710
+    InsidiousRemnants = 711
+    AttackOnJalissCamp = 717
+    CostumeBrawlOutpost = 721
+    WhitefuryRapids = 722
+    KystenShore = 723
+    DeepwayRuins = 724
+    PlikkupWorks = 725
+    KilroysPunchoutTournamet = 726
+    SpecialOpsFlameTempleCorridor = 727
+    SpecialOpsDragonGullet = 728
+    SpecialOpsGendichCourthouse = 729
+    TheTenguAccords = 770
+    TheBattleOfJahai = 771
+    TheFlightNorth = 772
+    TheRiseOfTheWhiteMantle = 773
+    SecretLairOfTheSnowmenLvl1 = 781
+    SecretLairOfTheSnowmenLvl2 = 782
+    DroknarsForgeExplorable = 783
+    IsleOfTheNameless2 = 784
+    DeactivatingRox = 788
+    DeactivatingPox = 789
+    DeactivatingNox = 790
+    SecretUndergroundLair = 791
+    GolemTutorialSimulation = 792
+    SnowballDominance = 793
+    ZaishenMenagerieGrounds = 794
+    ZaishenMenagerieOutpost = 795
+    CodexArenaOutpost = 796
+    TheUnderworldSomethingWickedThisWayComes = 806
+    TheUnderworldDontFearTheReapers = 807
+    LionsArchHalloween = 808
+    LionsArchWintersday = 809
+    LionsArchCanthanNewYear = 810
+    AscalonCityWintersday = 811
+    DroknarsForgeHalloween = 812
+    DroknarsForgeWintersday = 813
+    TombOfThePrimevalKingsHalloween = 814
+    ShingJeaMonasteryDragonFestival = 815
+    ShingJeaMonasteryCanthanNewYear = 816
+    KainengCenter2 = 817
+    KamadanJewelOfIstanHalloween = 818
+    KamadanJewelOfIstanWintersday = 819
+    KamadanJewelOfIstanCanthanNewYear = 820
+    EyeOfTheNorthOutpostWintersday = 821
+    WarInKrytaTalmarkWilderness = 837
+    TrialOfZinn = 838
+    DivinityCoastExplorable = 839
+    LionsArchKeep = 840
+    DalessioSeaboardExplorable = 841
+    TheBattleForLionsArchExplorable = 842
+    RiversideProvinceExplorable = 843
+    WarInKrytaLionsArch = 844
+    TheMasoleum = 845
+    RiseMap = 846
+    ShadowsInTheJungle = 847
+    AVengeanceOfBlades = 848
+    AuspiciousBeginnings = 849
+    OlfsteadExplorable = 854
+    TheGreatSnowballFightCrushSpirits = 855
+    TheGreatSnowballFightWinterWonderland = 856
+    EmbarkBeach = 857
+    WhatWaitsInShadowDragonsThroatExplorable = 860
+    AChanceEncounterKainengCenter = 861
+    TrackingTheCorruptionMarketplaceExplorable = 862
+    CanthaCourierBukdekByway = 863
+    ATreatysATreatyTsumeiVillage = 864
+    DeadlyCargoSeitungHarborExplorable = 865
+    TheRescueAttemptTahnnakaiTemple = 866
+    ViloenceInTheStreetsWajjunBazaar = 867
+    SacredPsyche = 868
+    CallingAllThugsShadowsPassage = 869
+    FindingJinnaiAltrumnRuins = 870
+    RaidOnShingJeaMonasteryShingJeaMonastery = 871
+    RaidOnKainengCenterKainengCenter = 872
+    MinistryOfOppressionWajjunBazaar = 873
+    TheFinalConfrontation = 874
+    LakesideCounty1070Ae = 875
+    AshfordCatacombs1070Ae = 876
+
 outposts = {
-    4: "Guild Hall - Warrior's Isle",
-    5: "Guild Hall - Hunter's Isle",
-    6: "Guild Hall - Wizard's Isle",
-    10: "Bloodstone Fen outpost",
-    11: "The Wilds outpost",
-    12: "Aurora Glade outpost",
-    14: "Gates of Kryta outpost",
-    15: "D'Alessio Seaboard outpost",
-    16: "Divinity Coast outpost",
-    19: "Sanctum Cay outpost",
-    20: "Droknar's Forge",
-    21: "The Frost Gate outpost",
-    22: "Ice Caves of Sorrow outpost",
-    23: "Thunderhead Keep outpost",
-    24: "Iron Mines of Moladune outpost",
-    25: "Borlis Pass outpost",
-    28: "The Great Northern Wall outpost",
-    29: "Fort Ranik outpost",
-    30: "Ruins of Surmia outpost",
-    32: "Nolani Academy outpost",
-    35: "Ember Light Camp",
-    36: "Grendich Courthouse",
-    37: "Glint' Challenge",
-    38: "Augury Rock outpost",
-    39: "Sardelac Sanitarium",
-    40: "Piken Square",
-    49: "Henge of Denravi",
-    51: "Senjis Corner",
-    52: "Guild Hall - Burning Isle",
-    55: "Lions Arch",
-    57: "Bergen Hot Springs",
-    65: "D'Alessio Arena",
-    73: "Riverside Province outpost",
-    75: "The Hall of Heroes Arena",
-    76: "Broken Tower Arena",
-    77: "House zu Heltzer",
-    78: "The Courtyard Arena",
-    79: "Unholy Temples Area",
-    80: "Burial Mounds Arena",
-    81: "Ascalon City",
-    82: "Tomb of the Primeval Kings",
-    83: "The Vault Arena",
-    84: "The Underworld Arena",
-    85: "Ascalon Arena outpost",
-    86: "Sacred Temples Arena",
-    109: "The Amnoon Oasis",
-    116: "Dunes of Despair outpost",
-    117: "Thirsty River outpost",
-    118: "Elona Reach outpost",
-    119: "Augury Rock outpost",
-    120: "The Dragon's Lair outpost",
-    122: "Ring of Fire outpost",
-    123: "Abaddon's Mouth outpost",
-    124: "Hell's Precipice outpost",
-    126: "Golden Gates",
-    129: "Lutgardis Conservatory",
-    130: "Vasburg Armory",
-    131: "Serenity Temple",
-    132: "Ice Tooth Cave",
-    133: "Beacons Perch",
-    134: "Yaks Bend",
-    135: "Frontier Gate",
-    136: "Beetletun",
-    137: "Fishermens Haven",
-    138: "Temple of the Ages",
-    139: "Ventaris Refuge",
-    140: "Druids Overlook",
-    141: "Maguuma Stade",
-    142: "Quarrel Falls",
-    150: "Ascalon Academy PvP battle",
-    152: "Heroes Audience",
-    153: "Seekers Passage",
-    154: "Destinys Gorge",
-    155: "Camp Rankor",
-    156: "The Granite Citadel",
-    157: "Marhans Grotto",
-    158: "Port Sledge",
-    159: "Copperhammer Mines",
-    163: "Pre-Searing: The Barradin Estate",
-    164: "Pre-Searing: Ashford Abbey",
-    165: "Pre-Searing: Foibles Fair",
-    166: "Pre-Searing: Fort Ranik",
-    176: "Guild Hall - Frozen Isle",
-    177: "Guild Hall - Nomad's Isle",
-    178: "Guild Hall - Druid's Isle",
-    179: "Guild Hall - Isle of the Dead",
-    180: "Fort Koga",
-    181: "Shiverpeak Arena outpost",
-    182: "Amnoon Arena",
-    183: "Deldrimor Arena",
-    184: "The Crag",
-    188: "Random Arenas outpost",
-    189: "Team Arenas outpost",
-    193: "Cavalon",
-    194: "Kaineng Center",
-    204: "Unwaking Waters - Kurzick",
-    206: "Deldrimor War Camp",
-    208: "Heroes' Crypt",
-    213: "Zen Daijun outpost",
-    214: "Minister Chos Estate outpost",
-    215: "Vizunah Square",
-    216: "Nahpui Quarter outpost",
-    217: "Tahnnakai Temple outpost",
-    218: "Arborstone outpost",
-    219: "Boreas Seabed outpost",
-    220: "Sunjiang District outpost",
-    221: "Fort Aspenwood",
-    222: "The Eternal Grove outpost",
-    223: "The Jade Quarry",
-    224: "Gyala Hatchery outpost",
-    225: "Raisu Palace outpost",
-    226: "Imperial Sanctum outpost",
-    228: "Grenz Frontier",
-    230: "Amatz Basin outpost",
-    234: "The Aurios Mines outpost",
-    242: "Shing Jea Monastery",
-    243: "Shing Jea Arena outpost",
-    248: "Great Temple of Balthazar",
-    249: "Tsumei Village",
-    250: "Seitung Harbor",
-    251: "Ran Musu Gardens",
-    253: "Dwayna Vs Grenth outpost",
-    266: "Urgoz's Warren outpost",
-    272: "Altrumm Ruins outpost",
-    273: "Zos Shivros Channel outpost",
-    274: "Dragons Throat outpost",
-    275: "Guild Hall - Isle of Weeping Stone",
-    276: "Guild Hall - Isle of Jade",
-    277: "Harvest Temple",
-    278: "Breaker Hollow",
-    279: "Leviathan Pits",
-    281: "Zaishen Challenge outpost",
-    282: "Zaishen Elite outpost",
-    283: "Maatu Keep",
-    284: "Zin Ku Corridor",
-    286: "Brauer Academy",
-    287: "Durheim Archives",
-    288: "Bai Paasu Reach",
-    289: "Seafarer's Rest",
-    291: "Vizunah Square Local Quarter",
-    292: "Vizunah Square Foreign Quarter",
-    293: "Fort Aspenwood - Luxon",
-    294: "Fort Aspenwood - Kurzick",
-    295: "The Jade Quarry - Luxon",
-    296: "The Jade Quarry - Kurzick",
-    297: "Unwaking Waters Luxon",
-    298: "Unwaking Waters Kurzick",
-    300: "Etnaran Keys",
-    303: "The Marketplace",
-    307: "The Deep outpost",
-    308: "Ascalon Arena",
-    309: "Annihilation",
-    310: "Kill Count Training",
-    311: "Annihilation",
-    312: "Obelisk Annihilation Training",
-    314: "Shiverpeak Arena",
-    318: "D'Alessio Arena",
-    319: "Amnoon Arena",
-    320: "Fort Koga",
-    321: "Heroes' Crypt",
-    322: "Shiverpeak Arena",
-    328: "Saltspray Beach - Luxon",
-    329: "Saltspray Beach - Kurzick",
-    330: "Heroes Ascent outpost",
-    331: "Grenz Frontier - Luxon",
-    332: "Grenz Frontier - Kurzick",
-    333: "The Ancestral Lands - Luxon",
-    334: "The Ancestral Lands - Kurzick",
-    335: "Etnaran Keys - Luxon",
-    336: "Etnaran Keys - Kurzick",
-    337: "Kaanai Canyon - Luxon",
-    338: "Kaanai Canyon - Kurzick",
-    339: "D'Alessio Arena",
-    340: "Amnoon Arena",
-    341: "Fort Koga",
-    342: "Heroes' Crypt",
-    343: "Shiverpeak Arena",
-    348: "Tanglewood Copse",
-    349: "Saint Anjeka's Shrine",
-    350: "Eredon Terrace",
-    352: "Brawler's Pit",
-    353: "Petrified Arena",
-    354: "Seabed Arena",
-    359: "Guild Hall - Imperial Isle",
-    360: "Guild Hall - Isle of Meditation",
-    368: "Dragon Arena outpost",
-    376: "Camp Hojanu",
-    378: "Wehhan Terraces",
-    381: "Yohlon Haven",
-    387: "Sunspear Sanctuary",
-    388: "Aspenwood Gate - Kurzick",
-    389: "Aspenwood Gate - Luxon",
-    390: "Jade Flats Kurzick",
-    391: "Jade Flats Luxon",
-    393: "Chantry of Secrets",
-    396: "Mihanu Township",
-    398: "Basalt Grotto",
-    403: "Honur Hill",
-    407: "Yahnur Market",
-    414: "The Kodash Bazaar",
-    421: "Venta Cemetery outpost",
-    424: "Kodonur Crossroads outpost",
-    425: "Rilohn Refuge outpost",
-    426: "Pogahn Passage outpost",
-    427: "Moddok Crevice outpost",
-    428: "Tihark Orchard outpost",
-    431: "Sunspear Great Hall",
-    433: "Dzagonur Bastion outpost",
-    434: "Dasha Vestibule outpost",
-    435: "Grand Court of Sebelkeh outpost",
-    438: "Bone Palace",
-    440: "The Mouth of Torment",
-    442: "Lair of the Forgotten",
-    445: "The Ebony Citadel of Mallyx",
-    449: "Kamadan Jewel of Istan",
-    450: "Gate of Torment",
-    457: "Beknur Harbor",
-    467: "Rollerbeetle Racing outpost",
-    469: "Gate of Fear",
-    473: "Gate of Secrets",
-    476: "Jennurs Horde outpost",
-    477: "Nundu Bay outpost",
-    478: "Gate of Desolation outpost",
-    479: "Champions Dawn",
-    480: "Ruins of Morah outpost",
-    487: "Beknur Harbor",
-    489: "Kodlonu Hamlet",
-    491: "Jokanur Diggings outpost",
-    492: "Blacktide Den outpost",
-    493: "Consulate Docks outpost",
-    494: "Gate of Pain outpost",
-    495: "Gate of Madness outpost",
-    496: "Abaddons Gate outpost",
-    497: "Sunspear Arena outpost",
-    502: "The Astralarium",
-    504: "Churranu Island Arena",
-    529: "Guild Hall - Uncharted Isle",
-    530: "Guild Hall - Isle of Wurms",
-    536: "Sunspear Arena",
-    537: "Guild Hall - Corrupted Isle",
-    538: "Guild Hall - Isle of Solitude",
-    544: "Chahbek Village outpost",
-    545: "Remains of Sahlahja outpost",
-    549: "Hero Battles outpost",
-    554: "Dajkah Inlet outpost",
-    555: "The Shadow Nexus outpost",
-    559: "Gate of the Nightfallen Lands",
-    624: "Vlox's Falls",
-    638: "Gadd's Encampment",
-    639: "Umbral Grotto",
-    640: "Rata Sum",
-    641: "Tarnished Haven",
-    642: "Eye of the North outpost",
-    643: "Sifhalla",
-    644: "Gunnar's Hold",
-    645: "Olafstead",
-    648: "Doomlore Shrine",
-    650: "Longeyes Ledge",
-    652: "Central Transfer Chamber",
-    675: "Boreal Station",
-    721: "Costume Brawl outpost",
-    795: "Zaishen Menagerie outpost",
-    796: "Codex Arena outpost",
-    808: "Lions Arch - Halloween",
-    809: "Lions Arch - Wintersday",
-    810: "Lions Arch - Canthan New Year",
-    811: "Ascalon City - Wintersday",
-    812: "Droknars Forge - Halloween",
-    813: "Droknars Forge - Wintersday",
-    814: "Tomb of the Primeval Kings - Halloween",
-    815: "Shing Jea Monastery - Dragon Festival",
-    816: "Shing Jea Monastery - Canthan New Year",
-    817: "Kaineng Center",
-    818: "Kamadan Jewel of Istan - Halloween",
-    819: "Kamadan Jewel of Istan - Wintersday",
-    820: "Kamadan Jewel of Istan - Canthan New Year",
-    821: "Eye of the North outpost - Wintersday",
-    857: "Embark Beach",
+    MapID.GHWarriorsIsle: "Guild Hall - Warrior's Isle",
+    MapID.GHHuntersIsle: "Guild Hall - Hunter's Isle",
+    MapID.GHWizardsIsle: "Guild Hall - Wizard's Isle",
+    MapID.BloodstoneFenOutpost: "Bloodstone Fen outpost",
+    MapID.TheWildsOutpost: "The Wilds outpost",
+    MapID.AuroraGladeOutpost: "Aurora Glade outpost",
+    MapID.GatesOfKrytaOutpost: "Gates of Kryta outpost",
+    MapID.DalessioSeaboardOutpost: "D'Alessio Seaboard outpost",
+    MapID.DivinityCoastOutpost: "Divinity Coast outpost",
+    MapID.SanctumCayOutpost: "Sanctum Cay outpost",
+    MapID.DroknarsForge: "Droknar's Forge",
+    MapID.TheFrostGateOutpost: "The Frost Gate outpost",
+    MapID.IceCavesOfSorrowOutpost: "Ice Caves of Sorrow outpost",
+    MapID.ThunderheadKeepOutpost: "Thunderhead Keep outpost",
+    MapID.IronMinesOfMoladuneOutpost: "Iron Mines of Moladune outpost",
+    MapID.BorlisPassOutpost: "Borlis Pass outpost",
+    MapID.TheGreatNorthernWallOutpost: "The Great Northern Wall outpost",
+    MapID.FortRanikOutpost: "Fort Ranik outpost",
+    MapID.RuinsOfSurmiaOutpost: "Ruins of Surmia outpost",
+    MapID.NolaniAcademyOutpost: "Nolani Academy outpost",
+    MapID.EmberLightCamp: "Ember Light Camp",
+    MapID.GrendichCourthouse: "Grendich Courthouse",
+    MapID.GlintChallenge: "Glint' Challenge",
+    MapID.AuguryRockOutpost: "Augury Rock outpost",
+    MapID.SardelacSanitarium: "Sardelac Sanitarium",
+    MapID.PikenSquare: "Piken Square",
+    MapID.HengeOfDenravi: "Henge of Denravi",
+    MapID.SenjisCorner: "Senjis Corner",
+    MapID.GHBurningIsle: "Guild Hall - Burning Isle",
+    MapID.LionsArch: "Lions Arch",
+    MapID.BergenHotSprings: "Bergen Hot Springs",
+    MapID.DalessioArena: "D'Alessio Arena",
+    MapID.RiversideProvinceOutpost: "Riverside Province outpost",
+    MapID.TheHallOfHeroesArena: "The Hall of Heroes Arena",
+    MapID.BrokenTowerArena: "Broken Tower Arena",
+    MapID.HouseZuHeltzer: "House zu Heltzer",
+    MapID.TheCourtyardArena: "The Courtyard Arena",
+    MapID.UnholyTemplesArena: "Unholy Temples Area",
+    MapID.BurialMoundsArena: "Burial Mounds Arena",
+    MapID.AscalonCity: "Ascalon City",
+    MapID.TombOfThePrimevalKings: "Tomb of the Primeval Kings",
+    MapID.TheVaultArena: "The Vault Arena",
+    MapID.TheUnderworldArena: "The Underworld Arena",
+    MapID.AscalonArenaOutpost: "Ascalon Arena outpost",
+    MapID.SacredTemplesArena: "Sacred Temples Arena",
+    MapID.TheAmnoonOasis: "The Amnoon Oasis",
+    MapID.DunesOfDespairOutpost: "Dunes of Despair outpost",
+    MapID.ThirstyRiverOutpost: "Thirsty River outpost",
+    MapID.ElonaReachOutpost: "Elona Reach outpost",
+    MapID.AuguryRockMission: "Augury Rock outpost",
+    MapID.TheDragonsLairOutpost: "The Dragon's Lair outpost",
+    MapID.RingOfFireOutpost: "Ring of Fire outpost",
+    MapID.AbaddonsMouthOutpost: "Abaddon's Mouth outpost",
+    MapID.HellsPrecipiceOutpost: "Hell's Precipice outpost",
+    MapID.GoldenGates: "Golden Gates",
+    MapID.LutgardisConservatory: "Lutgardis Conservatory",
+    MapID.VasburgArmory: "Vasburg Armory",
+    MapID.SerenityTemple: "Serenity Temple",
+    MapID.IceToothCave: "Ice Tooth Cave",
+    MapID.BeaconsPerch: "Beacons Perch",
+    MapID.YaksBend: "Yaks Bend",
+    MapID.FrontierGate: "Frontier Gate",
+    MapID.Beetletun: "Beetletun",
+    MapID.FishermensHaven: "Fishermens Haven",
+    MapID.TempleOfTheAges: "Temple of the Ages",
+    MapID.VentarisRefuge: "Ventaris Refuge",
+    MapID.DruidsOverlook: "Druids Overlook",
+    MapID.MaguumaStade: "Maguuma Stade",
+    MapID.QuarrelFalls: "Quarrel Falls",
+    MapID.AscalonAcademyPvpBattle: "Ascalon Academy PvP battle",
+    MapID.HeroesAudience: "Heroes Audience",
+    MapID.SeekersPassage: "Seekers Passage",
+    MapID.DestinysGorge: "Destinys Gorge",
+    MapID.CampRankor: "Camp Rankor",
+    MapID.TheGraniteCitadel: "The Granite Citadel",
+    MapID.MarhansGrotto: "Marhans Grotto",
+    MapID.PortSledge: "Port Sledge",
+    MapID.CopperhammerMines: "Copperhammer Mines",
+    MapID.PresearingTheBarradinEstate: "Pre-Searing: The Barradin Estate",
+    MapID.PresearingAshfordAbbey: "Pre-Searing: Ashford Abbey",
+    MapID.PresearingFoiblesFair: "Pre-Searing: Foibles Fair",
+    MapID.PresearingFortRanik: "Pre-Searing: Fort Ranik",
+    MapID.GHFrozenIsle: "Guild Hall - Frozen Isle",
+    MapID.GHNomadsIsle: "Guild Hall - Nomad's Isle",
+    MapID.GHDruidsIsle: "Guild Hall - Druid's Isle",
+    MapID.GHIsleOfTheDead: "Guild Hall - Isle of the Dead",
+    MapID.FortKoga1: "Fort Koga",
+    MapID.ShiverpeakArenaOutpost: "Shiverpeak Arena outpost",
+    MapID.AmnoonArena: "Amnoon Arena",
+    MapID.DeldrimorArena: "Deldrimor Arena",
+    MapID.TheCrag: "The Crag",
+    MapID.RandomArenasOutpost: "Random Arenas outpost",
+    MapID.TeamArenasOutpost: "Team Arenas outpost",
+    MapID.Cavalon: "Cavalon",
+    MapID.KainengCenter: "Kaineng Center",
+    MapID.UnwakingWatersKurzickMission: "Unwaking Waters - Kurzick",
+    MapID.DeldrimorWarCamp: "Deldrimor War Camp",
+    MapID.HeroesCrypt1: "Heroes' Crypt",
+    MapID.ZenDaijunOutpost: "Zen Daijun outpost",
+    MapID.MinisterChosEstateOutpost: "Minister Chos Estate outpost",
+    MapID.VizunahSquare: "Vizunah Square",
+    MapID.NahpuiQuarterOutpost: "Nahpui Quarter outpost",
+    MapID.TahnnakaiTempleOutpost: "Tahnnakai Temple outpost",
+    MapID.ArborstoneOutpost: "Arborstone outpost",
+    MapID.BoreasSeabedOutpost: "Boreas Seabed outpost",
+    MapID.SunjiangDistrictOutpost: "Sunjiang District outpost",
+    MapID.FortAspenwood: "Fort Aspenwood",
+    MapID.TheEternalGroveOutpost: "The Eternal Grove outpost",
+    MapID.TheJadeQuarry: "The Jade Quarry",
+    MapID.GyalaHatcheryOutpost: "Gyala Hatchery outpost",
+    MapID.RaisuPalaceOutpost: "Raisu Palace outpost",
+    MapID.ImperialSanctumOutpost: "Imperial Sanctum outpost",
+    MapID.GrenzFrontier: "Grenz Frontier",
+    MapID.AmatzBasinOutpost: "Amatz Basin outpost",
+    MapID.TheAuriosMinesOutpost: "The Aurios Mines outpost",
+    MapID.ShingJeaMonastery: "Shing Jea Monastery",
+    MapID.ShingJeaArenaOutpost: "Shing Jea Arena outpost",
+    MapID.GreatTempleOfBalthazar: "Great Temple of Balthazar",
+    MapID.TsumeiVillage: "Tsumei Village",
+    MapID.SeitungHarbor: "Seitung Harbor",
+    MapID.RanMusuGardens: "Ran Musu Gardens",
+    MapID.DwaynaVsGrenthOutpost: "Dwayna Vs Grenth outpost",
+    MapID.UrgozsWarrenOutpost: "Urgoz's Warren outpost",
+    MapID.AltrummRuinsOutpost: "Altrumm Ruins outpost",
+    MapID.ZosShivrosChannelOutpost: "Zos Shivros Channel outpost",
+    MapID.DragonsThroatOutpost: "Dragons Throat outpost",
+    MapID.GHIsleOfWeepingStone: "Guild Hall - Isle of Weeping Stone",
+    MapID.GHIsleOfJade: "Guild Hall - Isle of Jade",
+    MapID.HarvestTemple: "Harvest Temple",
+    MapID.BreakerHollow: "Breaker Hollow",
+    MapID.LeviathanPits: "Leviathan Pits",
+    MapID.ZaishenChallengeOutpost: "Zaishen Challenge outpost",
+    MapID.ZaishenEliteOutpost: "Zaishen Elite outpost",
+    MapID.MaatuKeep: "Maatu Keep",
+    MapID.ZinKuCorridor: "Zin Ku Corridor",
+    MapID.BrauerAcademy: "Brauer Academy",
+    MapID.DurheimArchives: "Durheim Archives",
+    MapID.BaiPaasuReach: "Bai Paasu Reach",
+    MapID.SeafarersRest: "Seafarer's Rest",
+    MapID.VizunahSquareLocalQuarter: "Vizunah Square Local Quarter",
+    MapID.VizunahSquareForeignQuarter: "Vizunah Square Foreign Quarter",
+    MapID.FortAspenwoodLuxon: "Fort Aspenwood - Luxon",
+    MapID.FortAspenwoodKurzick: "Fort Aspenwood - Kurzick",
+    MapID.TheJadeQuarryLuxon: "The Jade Quarry - Luxon",
+    MapID.TheJadeQuarryKurzick: "The Jade Quarry - Kurzick",
+    MapID.UnwakingWatersLuxonMission: "Unwaking Waters Luxon",
+    MapID.UnwakingWatersKurzick: "Unwaking Waters Kurzick",
+    MapID.EtnaranKeys: "Etnaran Keys",
+    MapID.TheMarketplace: "The Marketplace",
+    MapID.TheDeepOutpost: "The Deep outpost",
+    MapID.AscalonArena: "Ascalon Arena",
+    MapID.Annihilation: "Annihilation",
+    MapID.KillCountTraining: "Kill Count Training",
+    MapID.Annihilation2: "Annihilation",
+    MapID.ObeliskAnnihilationTraining: "Obelisk Annihilation Training",
+    MapID.ShiverpeakArena1: "Shiverpeak Arena",
+    MapID.DalessioArena2: "D'Alessio Arena",
+    MapID.AmnoonArena1: "Amnoon Arena",
+    MapID.FortKoga2: "Fort Koga",
+    MapID.HeroesCrypt2: "Heroes' Crypt",
+    MapID.ShiverpeakArena2: "Shiverpeak Arena",
+    MapID.SaltsprayBeachLuxon: "Saltspray Beach - Luxon",
+    MapID.SaltsprayBeachKurzick: "Saltspray Beach - Kurzick",
+    MapID.HeroesAscentOutpost: "Heroes Ascent outpost",
+    MapID.GrenzFrontierLuxon: "Grenz Frontier - Luxon",
+    MapID.GrenzFrontierKurzick: "Grenz Frontier - Kurzick",
+    MapID.TheAncestralLandsLuxon: "The Ancestral Lands - Luxon",
+    MapID.TheAncestralLandsKurzick: "The Ancestral Lands - Kurzick",
+    MapID.EtnaranKeysLuxon: "Etnaran Keys - Luxon",
+    MapID.EtnaranKeysKurzick: "Etnaran Keys - Kurzick",
+    MapID.KaanaiCanyonLuxon: "Kaanai Canyon - Luxon",
+    MapID.KaanaiCanyonKurzick: "Kaanai Canyon - Kurzick",
+    MapID.DalessioArena3: "D'Alessio Arena",
+    MapID.AmnoonArena2: "Amnoon Arena",
+    MapID.FortKoga3: "Fort Koga",
+    MapID.HeroesCrypt3: "Heroes' Crypt",
+    MapID.ShiverpeakArena3: "Shiverpeak Arena",
+    MapID.TanglewoodCopse: "Tanglewood Copse",
+    MapID.SaintAnjekasShrine: "Saint Anjeka's Shrine",
+    MapID.EredonTerrace: "Eredon Terrace",
+    MapID.BrawlersPit: "Brawler's Pit",
+    MapID.PetrifiedArena: "Petrified Arena",
+    MapID.SeabedArena: "Seabed Arena",
+    MapID.GHImperialIsle: "Guild Hall - Imperial Isle",
+    MapID.GHIsleOfMeditation: "Guild Hall - Isle of Meditation",
+    MapID.DragonArenaOutpost: "Dragon Arena outpost",
+    MapID.CampHojanu: "Camp Hojanu",
+    MapID.WehhanTerraces: "Wehhan Terraces",
+    MapID.YohlonHaven: "Yohlon Haven",
+    MapID.SunspearSanctuary: "Sunspear Sanctuary",
+    MapID.AspenwoodGateKurzick: "Aspenwood Gate - Kurzick",
+    MapID.AspenwoodGateLuxon: "Aspenwood Gate - Luxon",
+    MapID.JadeFlatsKurzick: "Jade Flats Kurzick",
+    MapID.JadeFlatsLuxon: "Jade Flats Luxon",
+    MapID.ChantryOfSecrets: "Chantry of Secrets",
+    MapID.MihanuTownship: "Mihanu Township",
+    MapID.BasaltGrotto: "Basalt Grotto",
+    MapID.HonurHill: "Honur Hill",
+    MapID.YahnurMarket: "Yahnur Market",
+    MapID.TheKodashBazaar: "The Kodash Bazaar",
+    MapID.VentaCemeteryOutpost: "Venta Cemetery outpost",
+    MapID.KodonurCrossroadsOutpost: "Kodonur Crossroads outpost",
+    MapID.RilohnRefugeOutpost: "Rilohn Refuge outpost",
+    MapID.PogahnPassageOutpost: "Pogahn Passage outpost",
+    MapID.ModdokCreviceOutpost: "Moddok Crevice outpost",
+    MapID.TiharkOrchardOutpost: "Tihark Orchard outpost",
+    MapID.SunspearGreatHall: "Sunspear Great Hall",
+    MapID.DzagonurBastionOutpost: "Dzagonur Bastion outpost",
+    MapID.DashaVestibuleOutpost: "Dasha Vestibule outpost",
+    MapID.GrandCourtOfSebelkehOutpost: "Grand Court of Sebelkeh outpost",
+    MapID.BonePalace: "Bone Palace",
+    MapID.TheMouthOfTorment: "The Mouth of Torment",
+    MapID.LairOfTheForgotten: "Lair of the Forgotten",
+    MapID.TheEbonyCitadelOfMallyx: "The Ebony Citadel of Mallyx",
+    MapID.KamadanJewelOfIstan: "Kamadan Jewel of Istan",
+    MapID.GateOfTorment: "Gate of Torment",
+    MapID.BeknurHarbor1: "Beknur Harbor",
+    MapID.RollerbeetleRacingOutpost: "Rollerbeetle Racing outpost",
+    MapID.GateOfFear: "Gate of Fear",
+    MapID.GateOfSecrets: "Gate of Secrets",
+    MapID.JennursHordeOutpost: "Jennurs Horde outpost",
+    MapID.NunduBayOutpost: "Nundu Bay outpost",
+    MapID.GateOfDesolationOutpost: "Gate of Desolation outpost",
+    MapID.ChampionsDawn: "Champions Dawn",
+    MapID.RuinsOfMorahOutpost: "Ruins of Morah outpost",
+    MapID.BeknurHarbor: "Beknur Harbor",
+    MapID.KodlonuHamlet: "Kodlonu Hamlet",
+    MapID.JokanurDiggingsOutpost: "Jokanur Diggings outpost",
+    MapID.BlacktideDenOutpost: "Blacktide Den outpost",
+    MapID.ConsulateDocksOutpost: "Consulate Docks outpost",
+    MapID.GateOfPainOutpost: "Gate of Pain outpost",
+    MapID.GateOfMadnessOutpost: "Gate of Madness outpost",
+    MapID.AbaddonsGateOutpost: "Abaddons Gate outpost",
+    MapID.SunspearArenaOutpost: "Sunspear Arena outpost",
+    MapID.TheAstralarium: "The Astralarium",
+    MapID.ChurranuIslandArena: "Churranu Island Arena",
+    MapID.GHUnchartedIsle: "Guild Hall - Uncharted Isle",
+    MapID.GHIsleOfWurms: "Guild Hall - Isle of Wurms",
+    MapID.SunspearArena: "Sunspear Arena",
+    MapID.GHCorruptedIsle: "Guild Hall - Corrupted Isle",
+    MapID.GHIsleOfSolitude: "Guild Hall - Isle of Solitude",
+    MapID.ChahbekVillageOutpost: "Chahbek Village outpost",
+    MapID.RemainsOfSahlahjaOutpost: "Remains of Sahlahja outpost",
+    MapID.HeroBattlesOutpost: "Hero Battles outpost",
+    MapID.DajkahInletOutpost: "Dajkah Inlet outpost",
+    MapID.TheShadowNexusOutpost: "The Shadow Nexus outpost",
+    MapID.GateOfTheNightfallenLands: "Gate of the Nightfallen Lands",
+    MapID.VloxsFalls: "Vlox's Falls",
+    MapID.GaddsEncampment: "Gadd's Encampment",
+    MapID.UmbralGrotto: "Umbral Grotto",
+    MapID.RataSum: "Rata Sum",
+    MapID.TarnishedHaven: "Tarnished Haven",
+    MapID.EyeOfTheNorthOutpost: "Eye of the North outpost",
+    MapID.Sifhalla: "Sifhalla",
+    MapID.GunnarsHold: "Gunnar's Hold",
+    MapID.Olafstead: "Olafstead",
+    MapID.DoomloreShrine: "Doomlore Shrine",
+    MapID.LongeyesLedge: "Longeyes Ledge",
+    MapID.CentralTransferChamber: "Central Transfer Chamber",
+    MapID.BorealStation: "Boreal Station",
+    MapID.CostumeBrawlOutpost: "Costume Brawl outpost",
+    MapID.ZaishenMenagerieOutpost: "Zaishen Menagerie outpost",
+    MapID.CodexArenaOutpost: "Codex Arena outpost",
+    MapID.LionsArchHalloween: "Lions Arch - Halloween",
+    MapID.LionsArchWintersday: "Lions Arch - Wintersday",
+    MapID.LionsArchCanthanNewYear: "Lions Arch - Canthan New Year",
+    MapID.AscalonCityWintersday: "Ascalon City - Wintersday",
+    MapID.DroknarsForgeHalloween: "Droknars Forge - Halloween",
+    MapID.DroknarsForgeWintersday: "Droknars Forge - Wintersday",
+    MapID.TombOfThePrimevalKingsHalloween: "Tomb of the Primeval Kings - Halloween",
+    MapID.ShingJeaMonasteryDragonFestival: "Shing Jea Monastery - Dragon Festival",
+    MapID.ShingJeaMonasteryCanthanNewYear: "Shing Jea Monastery - Canthan New Year",
+    MapID.KainengCenter2: "Kaineng Center",
+    MapID.KamadanJewelOfIstanHalloween: "Kamadan Jewel of Istan - Halloween",
+    MapID.KamadanJewelOfIstanWintersday: "Kamadan Jewel of Istan - Wintersday",
+    MapID.KamadanJewelOfIstanCanthanNewYear: "Kamadan Jewel of Istan - Canthan New Year",
+    MapID.EyeOfTheNorthOutpostWintersday: "Eye of the North outpost - Wintersday",
+    MapID.EmbarkBeach: "Embark Beach",
 }
 
 outpost_name_to_id = {name: id for id, name in outposts.items()}
@@ -1633,383 +2294,383 @@ outpost_name_to_id = {name: id for id, name in outposts.items()}
 # endregion
 # region Explorable Names
 explorables = {
-    7: "Warrior's Isle",
-    8: "Hunter's Isle",
-    9: "Wizard's Isle",
-    13: "Diessa Lowlands",
-    17: "Talmark Wilderness",
-    18: "The Black Curtain",
-    26: "Talus Chute",
-    27: "Griffon's Mouth",
-    31: "Xaquang Skyway",
-    33: "Old Ascalon",
-    34: "The Fissure of Woe",
-    41: "Sage Lands",
-    42: "Mamnoon Lagoon",
-    43: "Silverwood",
-    44: "Ettin's Back",
-    45: "Reed Bog",
-    46: "The Falls",
-    47: "Dry Top",
-    48: "Tangle Root",
-    53: "Tears of the Fallen",
-    54: "Scoundrel's Rise",
-    56: "Cursed Lands",
-    58: "North Kryta Province",
-    59: "Nebo Terrace",
-    60: "Majesty's Rest",
-    61: "Twin Serpent Lakes",
-    62: "Watchtower Coast",
-    63: "Stingray Strand",
-    64: "Kessex Peak",
-    67: "Burning Isle",
-    68: "Frozen Isle",
-    69: "Nomad's Isle",
-    70: "Druid's Isle",
-    71: "Isle of the Dead (guild hall)",
-    72: "The Underworld",
-    87: "Icedome",
-    88: "Iron Horse Mine",
-    89: "Anvil Rock",
-    90: "Lornar's Pass",
-    91: "Snake Dance",
-    92: "Tasca's Demise",
-    93: "Spearhead Peak",
-    94: "Ice Floe",
-    95: "Witman's Folly",
-    96: "Mineral Springs",
-    97: "Dreadnought's Drift",
-    98: "Frozen Forest",
-    99: "Traveler's Vale",
-    100: "Deldrimor Bowl",
-    101: "Regent Valley",
-    102: "The Breach",
-    103: "Ascalon Foothills",
-    104: "Pockmark Flats",
-    105: "Dragon's Gullet",
-    106: "Flame Temple Corridor",
-    107: "Eastern Frontier",
-    108: "The Scar",
-    110: "Diviner's Ascent",
-    111: "Vulture Drifts",
-    112: "The Arid Sea",
-    113: "Prophet's Path",
-    114: "Salt Flats",
-    115: "Skyward Reach",
-    121: "Perdition Rock",
-    127: "Scarred Earth",
-    128: "The Eternal Grove (explorable area)",
-    144: "Gyala Hatchery (explorable area)",
-    145: "The Catacombs",
-    146: "Lakeside County",
-    147: "The Northlands",
-    148: "Ascalon City (pre-Searing)",
-    149: "Ascalon Academy",
-    151: "Ascalon Academy",
-    160: "Green Hills County",
-    161: "Wizard's Folly",
-    162: "Regent Valley (pre-Searing)",
-    167: "Burning Isle",
-    168: "Druid's Isle",
-    170: "Frozen Isle",
-    171: "Warrior's Isle",
-    172: "Hunter's Isle",
-    173: "Wizard's Isle",
-    174: "Nomad's Isle",
-    175: "Isle of the Dead",
-    190: "Sorrow's Furnace",
-    191: "Grenth's Footprint",
-    195: "Drazach Thicket",
-    196: "Jaya Bluffs",
-    197: "Shenzun Tunnels",
-    198: "Archipelagos",
-    199: "Maishang Hills",
-    200: "Mount Qinkai",
-    201: "Melandru's Hope",
-    202: "Rhea's Crater",
-    203: "Silent Surf",
-    205: "Morostav Trail",
-    209: "Mourning Veil Falls",
-    210: "Ferndale",
-    211: "Pongmei Valley",
-    212: "Monastery Overlook",
-    227: "Unwaking Waters (explorable area)",
-    232: "Shadow's Passage",
-    233: "Raisu Palace (explorable area)",
-    235: "Panjiang Peninsula",
-    236: "Kinya Province",
-    237: "Haiju Lagoon",
-    238: "Sunqua Vale",
-    239: "Wajjun Bazaar",
-    240: "Bukdek Byway",
-    241: "The Undercity",
-    244: "Arborstone (explorable area)",
-    245: "Minister Chos Estate (explorable area)",
-    246: "Zen Daijun (explorable area)",
-    247: "Boreas Seabed (explorable area)",
-    252: "Linnok Courtyard",
-    256: "Sunjiang District (explorable area)",
-    265: "Nahpui Quarter (explorable area)",
-    269: "Tahnnakai Temple (explorable area)",
-    280: "Isle of the Nameless",
-    285: "Monastery Overlook",
-    290: "Bejunkan Pier",
-    301: "Raisu Pavilion",
-    302: "Kaineng Docks",
-    313: "Saoshang Trail",
-    344: "The Hall of Heroes",
-    345: "The Courtyard",
-    346: "Scarred Earth",
-    347: "The Underworld (explorable area)",
-    351: "Divine Path",
-    361: "Isle of Weeping Stone",
-    362: "Isle of Jade",
-    363: "Imperial Isle",
-    364: "Isle of Meditation",
-    369: "Jahai Bluffs",
-    371: "Marga Coast",
-    373: "Sunward Marches",
-    375: "Barbarous Shore",
-    377: "Badhok Caverns",
-    379: "Dejarin Estate",
-    380: "Arkjok Ward",
-    382: "Gandara, the Moon Fortress",
-    384: "The Floodplain of Mahnkelon",
-    385: "Lion's Arch (Sunspears in Kryta)",
-    386: "Turai's Procession",
-    392: "Yatendi Canyons",
-    394: "Garden of Seborhin",
-    395: "Holdings of Chokhin",
-    397: "Vehjin Mines",
-    399: "Forum Highlands",
-    400: "Kaineng Center (Sunspears in Cantha)",
-    402: "Resplendent Makuun",
-    404: "Wilderness of Bahdza",
-    406: "Vehtendi Valley",
-    413: "The Hidden City of Ahdashim",
-    415: "Lion's Gate",
-    419: "The Mirror of Lyss",
-    420: "Secure the Refuge",
-    422: "Bad Tide Rising#NPCs - Kamadan, Jewel of Istan (explorable area)",
-    423: "The Tribunal",
-    429: "Consulate",
-    430: "Plains of Jarin",
-    432: "Cliffs of Dohjok",
-    436: "Command Post",
-    437: "Joko's Domain",
-    439: "The Ruptured Heart",
-    441: "The Shattered Ravines",
-    443: "Poisoned Outcrops",
-    444: "The Sulfurous Wastes",
-    446: "The Alkali Pan",
-    447: "A Land of Heroes",
-    448: "Crystal Overlook",
-    455: "Nightfallen Garden",
-    456: "Churrhir Fields",
-    461: "The Underworld",
-    462: "Heart of Abaddon",
-    463: "The Underworld",
-    465: "Nightfallen Jahai",
-    466: "Depths of Madness",
-    468: "Domain of Fear",
-    470: "Domain of Pain",
-    471: "Bloodstone Fen (explorable area)",
-    472: "Domain of Secrets",
-    474: "Domain of Anguish",
-    481: "Fahranur, The First City",
-    482: "Bjora Marches",
-    483: "Zehlon Reach",
-    484: "Lahtenda Bog",
-    485: "Arbor Bay",
-    486: "Issnur Isles",
-    488: "Mehtani Keys",
-    490: "Island of Shehkah",
-    499: "Ice Cliff Chasms",
-    500: "Bokka Amphitheatre",
-    501: "Riven Earth",
-    503: "Throne of Secrets",
-    505: "Shing Jea Monastery (mission)",
-    506: "Haiju Lagoon (mission)",
-    507: "Jaya Bluffs (mission)",
-    508: "Seitung Harbor (mission)",
-    509: "Tsumei Village (mission)",
-    510: "Seitung Harbor (mission 2)",
-    511: "Tsumei Village (mission 2)",
-    513: "Drakkar Lake",
-    531: "Uncharted Isle",
-    532: "Isle of Wurms",
-    539: "Corrupted Isle",
-    540: "Isle of Solitude",
-    543: "Sun Docks",
-    546: "Jaga Moraine",
-    547: "Bombardment",
-    548: "Norrhart Domains",
-    550: "The Beachhead",
-    551: "The Crossing",
-    552: "Desert Sands",
-    553: "Varajar Fells",
-    558: "Sparkfly Swamp",
-    560: "Cathedral of Flames (level 1)",
-    561: "The Troubled Keeper",
-    566: "Verdant Cascades",
-    567: "Cathedral of Flames (level 2)",
-    568: "Cathedral of Flames (level 3)",
-    569: "Magus Stones",
-    570: "Catacombs of Kathandrax (level 1)",
-    571: "Catacombs of Kathandrax (level 2)",
-    572: "Alcazia Tangle",
-    573: "Rragar's Menagerie (level 1)",
-    574: "Rragar's Menagerie (level 2)",
-    575: "Rragar's Menagerie (level 3)",
-    576: "Ooza Pit",
-    577: "Slaver's Exile",
-    578: "Oola's Lab (level 1)",
-    579: "Oola's Lab (level 2)",
-    580: "Oola's Lab (level 3)",
-    581: "Shards of Oor (level 1)",
-    582: "Shards of Oor (level 2)",
-    583: "Shards of Oor (level 3)",
-    584: "Arachni's Haunt",
-    585: "Arachni's Haunt",
-    593: "Fetid River",
-    596: "Forgotten Shrines",
-    598: "Antechamber",
-    604: "Vloxen Excavations (level 1)",
-    605: "Vloxen Excavations (level 2)",
-    606: "Vloxen Excavations (level 3)",
-    607: "Heart of the Shiverpeaks (level 1)",
-    608: "Heart of the Shiverpeaks (level 2)",
-    609: "Heart of the Shiverpeaks (level 3)",
-    612: "Bloodstone Caves (level 1)",
-    613: "Bloodstone Caves (level 2)",
-    614: "Bloodstone Caves (level 3)",
-    615: "Bogroot Growths (level 1)",
-    616: "Bogroot Growths (level 2)",
-    617: "Raven's Point (level 1)",
-    618: "Raven's Point (level 2)",
-    619: "Raven's Point (level 3)",
-    620: "Slaver's Exile (level 1)",
-    621: "Slaver's Exile (level 2)",
-    622: "Slaver's Exile (level 3)",
-    623: "Slaver's Exile (level 4)",
-    625: "Battledepths",
-    628: "Sepulchre of Dragrimmar (level 1)",
-    629: "Sepulchre of Dragrimmar (level 2)",
-    630: "Frostmaw's Burrows (level 1)",
-    631: "Frostmaw's Burrows (level 2)",
-    632: "Frostmaw's Burrows (level 3)",
-    633: "Frostmaw's Burrows (level 4)",
-    634: "Frostmaw's Burrows (level 5)",
-    635: "Darkrime Delves (level 1)",
-    636: "Darkrime Delves (level 2)",
-    637: "Darkrime Delves (level 3)",
-    646: "Hall of Monuments",
-    647: "Dalada Uplands",
-    649: "Grothmar Wardowns",
-    651: "Sacnoth Valley",
-    653: "Curse of the Nornbear",
-    654: "Blood Washes Blood",
-    655: "A Gate Too Far (level 1)",
-    656: "A Gate Too Far (level 2)",
-    657: "A Gate Too Far (level 3)",
-    658: "The Elusive Golemancer (level 1)",
-    659: "The Elusive Golemancer (level 2)",
-    660: "The Elusive Golemancer (level 3)",
-    661: "Finding the Bloodstone (level 1)",
-    662: "Finding the Bloodstone (level 2)",
-    663: "Finding the Bloodstone (level 3)",
-    664: "Genius Operated Living Enchanted Manifestation",
-    665: "Against the Charr",
-    666: "Warband of Brothers (level 1)",
-    667: "Warband of Brothers (level 2)",
-    668: "Warband of Brothers (level 3)",
-    669: "Assault on the Stronghold",
-    670: "Destruction's Depths (level 1)",
-    671: "Destruction's Depths (level 2)",
-    672: "Destruction's Depths (level 3)",
-    673: "A Time for Heroes",
-    674: "Warband Training",
-    676: "Catacombs of Kathandrax",
-    678: "Attack of the Nornbear",
-    686: "Polymock Coliseum",
-    687: "Polymock Glacier",
-    688: "Polymock Crossing",
-    690: "Cold as Ice",
-    691: "Beneath Lion's Arch",
-    692: "Tunnels Below Cantha",
-    693: "Caverns Below Kamadan",
-    695: "Service: In Defense of the Eye",
-    696: "Mano a Norn-o",
-    697: "Service: Practice, Dummy",
-    698: "Hero Tutorial",
-    700: "The Norn Fighting Tournament",
-    701: "Secret Lair of the Snowmen",
-    702: "Norn Brawling Championship",
-    703: "Kilroy's Punchout Training",
-    704: "Fronis Irontoe's Lair",
-    705: "The Justiciar's End",
-    707: "The Great Norn Alemoot",
-    708: "Varajar Fells",
-    710: "Epilogue",
-    711: "Insidious Remnants",
-    717: "Attack on Jalis's Camp",
-    722: "Whitefury Rapids",
-    723: "Kysten Shore",
-    724: "Deepway Ruins",
-    725: "Plikkup Works",
-    726: "Kilroy's Punchout Tournament",
-    727: "Special Ops: Flame Temple Corridor",
-    728: "Special Ops: Dragon's Gullet",
-    729: "Special Ops: Grendich Courthouse",
-    770: "The Tengu Accords",
-    771: "The Battle of Jahai",
-    772: "The Flight North",
-    773: "The Rise of the White Mantle",
-    781: "Secret Lair of the Snowmen",
-    782: "Secret Lair of the Snowmen",
-    783: "Droknar's Forge (explorable area)",
-    788: "Deactivating R.O.X.#NPCs",
-    789: "Deactivating P.O.X.",
-    790: "Deactivating N.O.X.",
-    791: "Secret Underground Lair",
-    792: "Golem Tutorial Simulation",
-    793: "Snowball Dominance",
-    794: "Zaishen Menagerie Grounds",
-    806: "The Underworld (Something Wicked This Way Comes)",
-    807: "The Underworld (Don't Fear the Reapers)",
-    837: "Talmark Wilderness (War in Kryta)",
-    838: "Trial of Zinn",
-    839: "Divinity Coast (explorable area)",
-    840: "Lion's Arch Keep",
-    841: "D'Alessio Seaboard (explorable area)",
-    842: "The Battle for Lion's Arch (explorable area)",
-    843: "Riverside Province (explorable area)",
-    844: "Lion's Arch (War in Kryta)",
-    845: "The Mausoleum",
-    846: "Rise",
-    847: "Shadows in the Jungle",
-    848: "A Vengeance of Blades",
-    849: "Auspicious Beginnings",
-    854: "Olafstead (explorable area)",
-    855: "The Great Snowball Fight of the Gods (Operation: Crush Spirits)",
-    856: "The Great Snowball Fight of the Gods (Fighting in a Winter Wonderland)",
-    860: "What Waits in Shadow#NPCs - Dragon's Throat (explorable area)",
-    861: "A Chance Encounter#NPCs - Kaineng Center (Winds of Change)",
-    862: "Tracking the Corruption#NPCs - The Marketplace (explorable area)",
-    863: "Cantha Courier Crisis#NPCs - Bukdek Byway (Winds of Change)",
-    864: "A Treaty's a Treaty#NPCs - Tsumei Village (Winds of Change)",
-    865: "Deadly Cargo#NPCs - Seitung Harbor (explorable area)",
-    866: "The Rescue Attempt#NPCs - Tahnnakai Temple (Winds of Change)",
-    867: "Violence in the Streets#NPCs - Wajjun Bazaar (Winds of Change)",
-    868: "Scarred Psyche",
-    869: "Calling All Thugs#NPCs - Shadow's Passage (Winds of Change)",
-    870: "Finding Jinnai#NPCs - Altrumm Ruins",
-    871: "Raid on Shing Jea Monastery#NPCs - Shing Jea Monastery",
-    872: "Raid on Kaineng Center#NPCs - Kaineng Center (Winds of Change)",
-    873: "Ministry of Oppression#NPCs - Wajjun Bazaar (Winds of Change)",
-    874: "The Final Confrontation#NPCs - The Final Confrontation",
-    875: "Lakeside County: 1070 AE",
-    876: "Ashford Catacombs: 1070 AE",
+    MapID.WarriorsIsleExplorable: "Warrior's Isle",
+    MapID.HuntersIsleExplorable: "Hunter's Isle",
+    MapID.WizardsIsleExplorable: "Wizard's Isle",
+    MapID.DiessaLowlands: "Diessa Lowlands",
+    MapID.TalmarkWilderness: "Talmark Wilderness",
+    MapID.TheBlackCurtain: "The Black Curtain",
+    MapID.TalusChute: "Talus Chute",
+    MapID.GriffonsMouth: "Griffon's Mouth",
+    MapID.XaquangSkyway: "Xaquang Skyway",
+    MapID.OldAscalon: "Old Ascalon",
+    MapID.TheFissureOfWoe: "The Fissure of Woe",
+    MapID.SageLands: "Sage Lands",
+    MapID.MamnoonLagoon: "Mamnoon Lagoon",
+    MapID.Silverwood: "Silverwood",
+    MapID.EttinsBack: "Ettin's Back",
+    MapID.ReedBog: "Reed Bog",
+    MapID.TheFalls: "The Falls",
+    MapID.DryTop: "Dry Top",
+    MapID.TangleRoot: "Tangle Root",
+    MapID.TearsOfTheFallen: "Tears of the Fallen",
+    MapID.ScoundrelsRise: "Scoundrel's Rise",
+    MapID.CursedLands: "Cursed Lands",
+    MapID.NorthKrytaProvince: "North Kryta Province",
+    MapID.NeboTerrace: "Nebo Terrace",
+    MapID.MajestysRest: "Majesty's Rest",
+    MapID.TwinSerpentLakes: "Twin Serpent Lakes",
+    MapID.WatchtowerCoast: "Watchtower Coast",
+    MapID.StingrayStrand: "Stingray Strand",
+    MapID.KessexPeak: "Kessex Peak",
+    MapID.BurningIsleExplorable: "Burning Isle",
+    MapID.FrozenIsleExplorable: "Frozen Isle",
+    MapID.NomadsIsleExplorable: "Nomad's Isle",
+    MapID.DruidsIsleExplorable: "Druid's Isle",
+    MapID.IsleOfTheDeadExplorable: "Isle of the Dead (guild hall)",
+    MapID.TheUnderworld1: "The Underworld",
+    MapID.Icedome: "Icedome",
+    MapID.IronHorseMine: "Iron Horse Mine",
+    MapID.AnvilRock: "Anvil Rock",
+    MapID.LornarsPass: "Lornar's Pass",
+    MapID.SnakeDance: "Snake Dance",
+    MapID.TascasDemise: "Tasca's Demise",
+    MapID.SpearheadPeak: "Spearhead Peak",
+    MapID.IceFloe: "Ice Floe",
+    MapID.WitmansFolly: "Witman's Folly",
+    MapID.MineralSprings: "Mineral Springs",
+    MapID.DreadnoughtsDrift: "Dreadnought's Drift",
+    MapID.FrozenForest: "Frozen Forest",
+    MapID.TravelersVale: "Traveler's Vale",
+    MapID.DeldrimorBowl: "Deldrimor Bowl",
+    MapID.RegentValley: "Regent Valley",
+    MapID.TheBreach: "The Breach",
+    MapID.AscalonFoothills: "Ascalon Foothills",
+    MapID.PockmarkFlats: "Pockmark Flats",
+    MapID.DragonsGullet: "Dragon's Gullet",
+    MapID.FlameTempleCorridor: "Flame Temple Corridor",
+    MapID.EasternFrontier: "Eastern Frontier",
+    MapID.TheScar: "The Scar",
+    MapID.DivinersAscent: "Diviner's Ascent",
+    MapID.VultureDrifts: "Vulture Drifts",
+    MapID.TheAridSea: "The Arid Sea",
+    MapID.ProphetsPath: "Prophet's Path",
+    MapID.SaltFlats: "Salt Flats",
+    MapID.SkywardReach: "Skyward Reach",
+    MapID.PerditionRock: "Perdition Rock",
+    MapID.ScarredEarth1: "Scarred Earth",
+    MapID.TheEternalGroveExplorable: "The Eternal Grove (explorable area)",
+    MapID.GyalaHatcheryExplorable: "Gyala Hatchery (explorable area)",
+    MapID.TheCatacombs: "The Catacombs",
+    MapID.LakesideCounty: "Lakeside County",
+    MapID.TheNorthlands: "The Northlands",
+    MapID.AscalonCityOutpost: "Ascalon City (pre-Searing)",
+    MapID.AscalonAcademy: "Ascalon Academy",
+    MapID.AscalonAcademy2: "Ascalon Academy",
+    MapID.GreenHillsCounty: "Green Hills County",
+    MapID.WizardsFolly: "Wizard's Folly",
+    MapID.PresearingRegentValley: "Regent Valley (pre-Searing)",
+    MapID.BurningIsle: "Burning Isle",
+    MapID.DruidsIsle: "Druid's Isle",
+    MapID.FrozenIsle: "Frozen Isle",
+    MapID.WarriorsIsle: "Warrior's Isle",
+    MapID.HuntersIsle: "Hunter's Isle",
+    MapID.WizardsIsle: "Wizard's Isle",
+    MapID.NomadsIsle: "Nomad's Isle",
+    MapID.IsleOfTheDead: "Isle of the Dead",
+    MapID.SorrowsFurnace: "Sorrow's Furnace",
+    MapID.GrenthsFootprint: "Grenth's Footprint",
+    MapID.DrazachThicket: "Drazach Thicket",
+    MapID.JayaBluffs: "Jaya Bluffs",
+    MapID.ShenzunTunnels: "Shenzun Tunnels",
+    MapID.Archipelagos: "Archipelagos",
+    MapID.MaishangHills: "Maishang Hills",
+    MapID.MountQinkai: "Mount Qinkai",
+    MapID.MelandrusHope: "Melandru's Hope",
+    MapID.RheasCrater: "Rhea's Crater",
+    MapID.SilentSurf: "Silent Surf",
+    MapID.MorostavTrail: "Morostav Trail",
+    MapID.MourningVeilFalls: "Mourning Veil Falls",
+    MapID.Ferndale: "Ferndale",
+    MapID.PongmeiValley: "Pongmei Valley",
+    MapID.MonasteryOverlook: "Monastery Overlook",
+    MapID.UnwakingWatersLuxon: "Unwaking Waters (explorable area)",
+    MapID.ShadowsPassage: "Shadow's Passage",
+    MapID.RaisuPalaceMission: "Raisu Palace (explorable area)",
+    MapID.PanjiangPeninsula: "Panjiang Peninsula",
+    MapID.KinyaProvince: "Kinya Province",
+    MapID.HaijuLagoon: "Haiju Lagoon",
+    MapID.SunquaVale: "Sunqua Vale",
+    MapID.WajjunBazaar: "Wajjun Bazaar",
+    MapID.BukdekByway: "Bukdek Byway",
+    MapID.TheUndercity: "The Undercity",
+    MapID.ArborstoneExplorable: "Arborstone (explorable area)",
+    MapID.MinisterChosEstateExplorable: "Minister Chos Estate (explorable area)",
+    MapID.ZenDaijunExplorable: "Zen Daijun (explorable area)",
+    MapID.BoreasSeabedExplorable: "Boreas Seabed (explorable area)",
+    MapID.LinnokCourtyard: "Linnok Courtyard",
+    MapID.SunjiangDistrictExplorable: "Sunjiang District (explorable area)",
+    MapID.NahpuiQuarterExplorable: "Nahpui Quarter (explorable area)",
+    MapID.TahnnakaiTempleExplorable: "Tahnnakai Temple (explorable area)",
+    MapID.IsleOfTheNameless1: "Isle of the Nameless",
+    MapID.MonasteryOverlook2: "Monastery Overlook",
+    MapID.BejunkanPier: "Bejunkan Pier",
+    MapID.RaisuPavillion: "Raisu Pavilion",
+    MapID.KainengDocks: "Kaineng Docks",
+    MapID.SaoshangTrail: "Saoshang Trail",
+    MapID.TheHallOfHeroes: "The Hall of Heroes",
+    MapID.TheCourtyard: "The Courtyard",
+    MapID.ScarredEarth2: "Scarred Earth",
+    MapID.TheUnderworldExplorable: "The Underworld (explorable area)",
+    MapID.DivinePath: "Divine Path",
+    MapID.IsleOfWeepingStoneExplorable: "Isle of Weeping Stone",
+    MapID.IsleOfJadeExplorable: "Isle of Jade",
+    MapID.ImperialIsleExplorable: "Imperial Isle",
+    MapID.IsleOfMeditationExplorable: "Isle of Meditation",
+    MapID.JahaiBluffs: "Jahai Bluffs",
+    MapID.MargaCoast: "Marga Coast",
+    MapID.SunwardMarches: "Sunward Marches",
+    MapID.BarbarousShore: "Barbarous Shore",
+    MapID.BahdokCaverns: "Badhok Caverns",
+    MapID.DejarinEstate: "Dejarin Estate",
+    MapID.ArkjokWard: "Arkjok Ward",
+    MapID.GandaraTheMoonFortress: "Gandara, the Moon Fortress",
+    MapID.TheFloodplainOfMahnkelon: "The Floodplain of Mahnkelon",
+    MapID.LionsArchDuringSunspearsInKryta: "Lion's Arch (Sunspears in Kryta)",
+    MapID.TuraisProcession: "Turai's Procession",
+    MapID.YatendiCanyons: "Yatendi Canyons",
+    MapID.GardenOfSeborhin: "Garden of Seborhin",
+    MapID.HoldingsOfChokhin: "Holdings of Chokhin",
+    MapID.VehjinMines: "Vehjin Mines",
+    MapID.ForumHighlands: "Forum Highlands",
+    MapID.KainengCenterDuringSunspearsInCantha: "Kaineng Center (Sunspears in Cantha)",
+    MapID.ResplendentMakuun: "Resplendent Makuun",
+    MapID.WildernessOfBahdza: "Wilderness of Bahdza",
+    MapID.VehtendiValley: "Vehtendi Valley",
+    MapID.TheHiddenCityOfAhdashim: "The Hidden City of Ahdashim",
+    MapID.LionsGate: "Lion's Gate",
+    MapID.TheMirrorOfLyss: "The Mirror of Lyss",
+    MapID.SecureTheRefuge: "Secure the Refuge",
+    MapID.BadTideRisingKamadanExplorable: "Bad Tide Rising#NPCs - Kamadan, Jewel of Istan (explorable area)",
+    MapID.TheTribunal: "The Tribunal",
+    MapID.Consulate: "Consulate",
+    MapID.PlainsOfJarin: "Plains of Jarin",
+    MapID.CliffsOfDohjok: "Cliffs of Dohjok",
+    MapID.CommandPost: "Command Post",
+    MapID.JokosDomain: "Joko's Domain",
+    MapID.TheRupturedHeart: "The Ruptured Heart",
+    MapID.TheShatteredRavines: "The Shattered Ravines",
+    MapID.PoisonedOutcrops: "Poisoned Outcrops",
+    MapID.TheSulfurousWastes: "The Sulfurous Wastes",
+    MapID.TheAlkaliPan: "The Alkali Pan",
+    MapID.ALandOfHeroes: "A Land of Heroes",
+    MapID.CrystalOverlook: "Crystal Overlook",
+    MapID.NightfallenGarden: "Nightfallen Garden",
+    MapID.ChuurhirFields: "Churrhir Fields",
+    MapID.TheUnderworld2: "The Underworld",
+    MapID.HeartOfAbaddon: "Heart of Abaddon",
+    MapID.TheUnderworld3: "The Underworld",
+    MapID.NightfallenJahai: "Nightfallen Jahai",
+    MapID.DepthsOfMadness: "Depths of Madness",
+    MapID.DomainOfFear: "Domain of Fear",
+    MapID.DomainOfPain: "Domain of Pain",
+    MapID.BloodstoneFenExplorable: "Bloodstone Fen (explorable area)",
+    MapID.DomainOfSecrets: "Domain of Secrets",
+    MapID.DomainOfAnguish: "Domain of Anguish",
+    MapID.FahranurTheFirstCity: "Fahranur, The First City",
+    MapID.BjoraMarches: "Bjora Marches",
+    MapID.ZehlonReach: "Zehlon Reach",
+    MapID.LahtedaBog: "Lahtenda Bog",
+    MapID.ArborBay: "Arbor Bay",
+    MapID.IssnurIsles: "Issnur Isles",
+    MapID.MehtaniKeys: "Mehtani Keys",
+    MapID.IslandOfShehkah: "Island of Shehkah",
+    MapID.IceCliffChasms: "Ice Cliff Chasms",
+    MapID.BokkaAmphitheatre: "Bokka Amphitheatre",
+    MapID.RivenEarth: "Riven Earth",
+    MapID.ThroneOfSecrets: "Throne of Secrets",
+    MapID.ShingJeaMonasteryMission: "Shing Jea Monastery (mission)",
+    MapID.HaijuLagoonMission: "Haiju Lagoon (mission)",
+    MapID.JayaBluffsMission: "Jaya Bluffs (mission)",
+    MapID.SeitungHarborMission: "Seitung Harbor (mission)",
+    MapID.TsumeiVillageMission: "Tsumei Village (mission)",
+    MapID.SeitungHarborMission2: "Seitung Harbor (mission 2)",
+    MapID.TsumeiVillageMission2: "Tsumei Village (mission 2)",
+    MapID.DrakkarLake: "Drakkar Lake",
+    MapID.UnchartedIsleExplorable: "Uncharted Isle",
+    MapID.IsleOfWurmsExplorable: "Isle of Wurms",
+    MapID.CorruptedIsleExplorable: "Corrupted Isle",
+    MapID.IsleOfSolitudeExplorable: "Isle of Solitude",
+    MapID.SunDocks: "Sun Docks",
+    MapID.JagaMoraine: "Jaga Moraine",
+    MapID.Bombardment: "Bombardment",
+    MapID.NorrhartDomains: "Norrhart Domains",
+    MapID.TheBeachhead: "The Beachhead",
+    MapID.TheCrossing: "The Crossing",
+    MapID.DesertSands: "Desert Sands",
+    MapID.VarajarFells: "Varajar Fells",
+    MapID.SparkflySwamp: "Sparkfly Swamp",
+    MapID.CathedralOfFlames: "Cathedral of Flames (level 1)",
+    MapID.TheTroubledKeeper: "The Troubled Keeper",
+    MapID.VerdantCascades: "Verdant Cascades",
+    MapID.CathedralOfFlamesLvl1: "Cathedral of Flames (level 2)",
+    MapID.CathedralOfFlamesLvl2: "Cathedral of Flames (level 3)",
+    MapID.MagusStones: "Magus Stones",
+    MapID.CatacombsOfKathandraxLvl1: "Catacombs of Kathandrax (level 1)",
+    MapID.CatacombsOfKathandraxLvl2: "Catacombs of Kathandrax (level 2)",
+    MapID.AlcaziaTangle: "Alcazia Tangle",
+    MapID.RragarsMenagerieLvl1: "Rragar's Menagerie (level 1)",
+    MapID.RragarsMenagerieLvl2: "Rragar's Menagerie (level 2)",
+    MapID.RragarsMenagerieLvl3: "Rragar's Menagerie (level 3)",
+    MapID.OozaPit: "Ooza Pit",
+    MapID.SlaversExile: "Slaver's Exile",
+    MapID.OolasLabLvl1: "Oola's Lab (level 1)",
+    MapID.OolasLabLvl2: "Oola's Lab (level 2)",
+    MapID.OolasLabLvl3: "Oola's Lab (level 3)",
+    MapID.ShardsOfOorLvl1: "Shards of Oor (level 1)",
+    MapID.ShardsOfOorLvl2: "Shards of Oor (level 2)",
+    MapID.ShardsOfOorLvl3: "Shards of Oor (level 3)",
+    MapID.ArachnisHauntLvl1: "Arachni's Haunt",
+    MapID.ArachnisHauntLvl2: "Arachni's Haunt",
+    MapID.FetidRiver: "Fetid River",
+    MapID.ForgottenShrines: "Forgotten Shrines",
+    MapID.Antechamber: "Antechamber",
+    MapID.VloxenExcavationsLvl1: "Vloxen Excavations (level 1)",
+    MapID.VloxenExcavationsLvl2: "Vloxen Excavations (level 2)",
+    MapID.VloxenExcavationsLvl3: "Vloxen Excavations (level 3)",
+    MapID.HeartOfTheShiverpeaksLvl1: "Heart of the Shiverpeaks (level 1)",
+    MapID.HeartOfTheShiverpeaksLvl2: "Heart of the Shiverpeaks (level 2)",
+    MapID.HeartOfTheShiverpeaksLvl3: "Heart of the Shiverpeaks (level 3)",
+    MapID.BloodstoneCavesLvl1: "Bloodstone Caves (level 1)",
+    MapID.BloodstoneCavesLvl2: "Bloodstone Caves (level 2)",
+    MapID.BloodstoneCavesLvl3: "Bloodstone Caves (level 3)",
+    MapID.BogrootGrowthsLvl1: "Bogroot Growths (level 1)",
+    MapID.BogrootGrowthsLvl2: "Bogroot Growths (level 2)",
+    MapID.RavensPointLvl1: "Raven's Point (level 1)",
+    MapID.RavensPointLvl2: "Raven's Point (level 2)",
+    MapID.RavensPointLvl3: "Raven's Point (level 3)",
+    MapID.SlaversExileLvl1: "Slaver's Exile (level 1)",
+    MapID.SlaversExileLvl2: "Slaver's Exile (level 2)",
+    MapID.SlaversExileLvl3: "Slaver's Exile (level 3)",
+    MapID.SlaversExileLvl4: "Slaver's Exile (level 4)",
+    MapID.Battledepths: "Battledepths",
+    MapID.SepulchreOfDragrimmarLvl1: "Sepulchre of Dragrimmar (level 1)",
+    MapID.SepulchreOfDragrimmarLvl2: "Sepulchre of Dragrimmar (level 2)",
+    MapID.FrostmawsBurrowsLvl1: "Frostmaw's Burrows (level 1)",
+    MapID.FrostmawsBurrowsLvl2: "Frostmaw's Burrows (level 2)",
+    MapID.FrostmawsBurrowsLvl3: "Frostmaw's Burrows (level 3)",
+    MapID.FrostmawsBurrowsLvl4: "Frostmaw's Burrows (level 4)",
+    MapID.FrostmawsBurrowsLvl5: "Frostmaw's Burrows (level 5)",
+    MapID.DarkrimeDelvesLvl1: "Darkrime Delves (level 1)",
+    MapID.DarkrimeDelvesLvl2: "Darkrime Delves (level 2)",
+    MapID.DarkrimeDelvesLvl3: "Darkrime Delves (level 3)",
+    MapID.HallOfMonuments: "Hall of Monuments",
+    MapID.DaladaUplands: "Dalada Uplands",
+    MapID.GrothmarWardowns: "Grothmar Wardowns",
+    MapID.SacnothValley: "Sacnoth Valley",
+    MapID.CurseOfTheNornbear: "Curse of the Nornbear",
+    MapID.BloodWashesBlood: "Blood Washes Blood",
+    MapID.AGateTooFarLvl1: "A Gate Too Far (level 1)",
+    MapID.AGateTooFarLvl2: "A Gate Too Far (level 2)",
+    MapID.AGateTooFarLvl3: "A Gate Too Far (level 3)",
+    MapID.TheElusiveGolemancerLvl1: "The Elusive Golemancer (level 1)",
+    MapID.TheElusiveGolemancerLvl2: "The Elusive Golemancer (level 2)",
+    MapID.TheElusiveGolemancerLvl3: "The Elusive Golemancer (level 3)",
+    MapID.FindingTheBloodstoneLvl1: "Finding the Bloodstone (level 1)",
+    MapID.FindingTheBloodstoneLvl2: "Finding the Bloodstone (level 2)",
+    MapID.FindingTheBloodstoneLvl3: "Finding the Bloodstone (level 3)",
+    MapID.GeniusOperatedLivingEnchantedManifestation: "Genius Operated Living Enchanted Manifestation",
+    MapID.AgainstTheCharr: "Against the Charr",
+    MapID.WarbandOfBrothersLvl1: "Warband of Brothers (level 1)",
+    MapID.WarbandOfBrothersLvl2: "Warband of Brothers (level 2)",
+    MapID.WarbandOfBrothersLvl3: "Warband of Brothers (level 3)",
+    MapID.AssaultTheStronghold: "Assault on the Stronghold",
+    MapID.DestructionsDepthsLvl1: "Destruction's Depths (level 1)",
+    MapID.DestructionsDepthsLvl2: "Destruction's Depths (level 2)",
+    MapID.DestructionsDepthsLvl3: "Destruction's Depths (level 3)",
+    MapID.ATimeForHeroes: "A Time for Heroes",
+    MapID.WarbandTraining: "Warband Training",
+    MapID.CatacombsOfKathandrax: "Catacombs of Kathandrax",
+    MapID.AttackOfTheNornbear: "Attack of the Nornbear",
+    MapID.PolymockColiseum: "Polymock Coliseum",
+    MapID.PolymockGlacier: "Polymock Glacier",
+    MapID.PolymockCrossing: "Polymock Crossing",
+    MapID.ColdAsIce: "Cold as Ice",
+    MapID.BeneathLionsArch: "Beneath Lion's Arch",
+    MapID.TunnelsBelowCantha: "Tunnels Below Cantha",
+    MapID.CavernsBelowKamadan: "Caverns Below Kamadan",
+    MapID.ServiceInDefenseOfTheEye: "Service: In Defense of the Eye",
+    MapID.ManoANorno: "Mano a Norn-o",
+    MapID.ServicePracticeDummy: "Service: Practice, Dummy",
+    MapID.HeroTutorial: "Hero Tutorial",
+    MapID.TheNornFightingTournament: "The Norn Fighting Tournament",
+    MapID.SecretLairOfTheSnowmen: "Secret Lair of the Snowmen",
+    MapID.NornBrawlingChampionship: "Norn Brawling Championship",
+    MapID.KilroysPunchoutTraining: "Kilroy's Punchout Training",
+    MapID.FronisIrontoesLair: "Fronis Irontoe's Lair",
+    MapID.TheJusticiarsEnd: "The Justiciar's End",
+    MapID.TheGreatNornAlemoot: "The Great Norn Alemoot",
+    MapID.VarajarFells2: "Varajar Fells",
+    MapID.Epilogue: "Epilogue",
+    MapID.InsidiousRemnants: "Insidious Remnants",
+    MapID.AttackOnJalissCamp: "Attack on Jalis's Camp",
+    MapID.WhitefuryRapids: "Whitefury Rapids",
+    MapID.KystenShore: "Kysten Shore",
+    MapID.DeepwayRuins: "Deepway Ruins",
+    MapID.PlikkupWorks: "Plikkup Works",
+    MapID.KilroysPunchoutTournamet: "Kilroy's Punchout Tournament",
+    MapID.SpecialOpsFlameTempleCorridor: "Special Ops: Flame Temple Corridor",
+    MapID.SpecialOpsDragonGullet: "Special Ops: Dragon's Gullet",
+    MapID.SpecialOpsGendichCourthouse: "Special Ops: Grendich Courthouse",
+    MapID.TheTenguAccords: "The Tengu Accords",
+    MapID.TheBattleOfJahai: "The Battle of Jahai",
+    MapID.TheFlightNorth: "The Flight North",
+    MapID.TheRiseOfTheWhiteMantle: "The Rise of the White Mantle",
+    MapID.SecretLairOfTheSnowmenLvl1: "Secret Lair of the Snowmen",
+    MapID.SecretLairOfTheSnowmenLvl2: "Secret Lair of the Snowmen",
+    MapID.DroknarsForgeExplorable: "Droknar's Forge (explorable area)",
+    MapID.DeactivatingRox: "Deactivating R.O.X.#NPCs",
+    MapID.DeactivatingPox: "Deactivating P.O.X.",
+    MapID.DeactivatingNox: "Deactivating N.O.X.",
+    MapID.SecretUndergroundLair: "Secret Underground Lair",
+    MapID.GolemTutorialSimulation: "Golem Tutorial Simulation",
+    MapID.SnowballDominance: "Snowball Dominance",
+    MapID.ZaishenMenagerieGrounds: "Zaishen Menagerie Grounds",
+    MapID.TheUnderworldSomethingWickedThisWayComes: "The Underworld (Something Wicked This Way Comes)",
+    MapID.TheUnderworldDontFearTheReapers: "The Underworld (Don't Fear the Reapers)",
+    MapID.TrialOfZinn: "Talmark Wilderness (War in Kryta)",
+    MapID.DivinityCoastExplorable: "Trial of Zinn",
+    MapID.LionsArchKeep: "Divinity Coast (explorable area)",
+    MapID.DalessioSeaboardExplorable: "Lion's Arch Keep",
+    MapID.TheBattleForLionsArchExplorable: "D'Alessio Seaboard (explorable area)",
+    MapID.RiversideProvinceExplorable: "The Battle for Lion's Arch (explorable area)",
+    MapID.WarInKrytaLionsArch: "Riverside Province (explorable area)",
+    MapID.TheMasoleum: "Lion's Arch (War in Kryta)",
+    MapID.RiseMap: "The Mausoleum",
+    MapID.ShadowsInTheJungle: "Rise",
+    MapID.AVengeanceOfBlades: "Shadows in the Jungle",
+    MapID.AuspiciousBeginnings: "A Vengeance of Blades",
+    MapID.OlfsteadExplorable: "Auspicious Beginnings",
+    MapID.TheGreatSnowballFightCrushSpirits: "Olafstead (explorable area)",
+    MapID.TheGreatSnowballFightWinterWonderland: "The Great Snowball Fight of the Gods (Operation: Crush Spirits)",
+    MapID.EmbarkBeach: "The Great Snowball Fight of the Gods (Fighting in a Winter Wonderland)",
+    MapID.WhatWaitsInShadowDragonsThroatExplorable: "What Waits in Shadow#NPCs - Dragon's Throat (explorable area)",
+    MapID.AChanceEncounterKainengCenter: "A Chance Encounter#NPCs - Kaineng Center (Winds of Change)",
+    MapID.TrackingTheCorruptionMarketplaceExplorable: "Tracking the Corruption#NPCs - The Marketplace (explorable area)",
+    MapID.CanthaCourierBukdekByway: "Cantha Courier Crisis#NPCs - Bukdek Byway (Winds of Change)",
+    MapID.ATreatysATreatyTsumeiVillage: "A Treaty's a Treaty#NPCs - Tsumei Village (Winds of Change)",
+    MapID.DeadlyCargoSeitungHarborExplorable: "Deadly Cargo#NPCs - Seitung Harbor (explorable area)",
+    MapID.TheRescueAttemptTahnnakaiTemple: "The Rescue Attempt#NPCs - Tahnnakai Temple (Winds of Change)",
+    MapID.ViloenceInTheStreetsWajjunBazaar: "Violence in the Streets#NPCs - Wajjun Bazaar (Winds of Change)",
+    MapID.SacredPsyche: "Scarred Psyche",
+    MapID.CallingAllThugsShadowsPassage: "Calling All Thugs#NPCs - Shadow's Passage (Winds of Change)",
+    MapID.FindingJinnaiAltrumnRuins: "Finding Jinnai#NPCs - Altrumm Ruins",
+    MapID.RaidOnShingJeaMonasteryShingJeaMonastery: "Raid on Shing Jea Monastery#NPCs - Shing Jea Monastery",
+    MapID.RaidOnKainengCenterKainengCenter: "Raid on Kaineng Center#NPCs - Kaineng Center (Winds of Change)",
+    MapID.MinistryOfOppressionWajjunBazaar: "Ministry of Oppression#NPCs - Wajjun Bazaar (Winds of Change)",
+    MapID.TheFinalConfrontation: "The Final Confrontation#NPCs - The Final Confrontation",
+    MapID.LakesideCounty1070Ae: "Lakeside County: 1070 AE",
+    MapID.AshfordCatacombs1070Ae: "Ashford Catacombs: 1070 AE",
 }
 
 explorable_name_to_id = {name: id for id, name in explorables.items()}

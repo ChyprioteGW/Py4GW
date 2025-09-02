@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _6_beaconsperch_to_gatesofkryta_ids = {
-    "outpost_id": outpost_name_to_id["Beacons Perch"],
+    "outpost_id": MapID.BeaconsPerch,
 }
 
-# 2) Outpost exit path
 _6_beaconsperch_to_gatesofkryta_outpost_path = [
     (-10472, 35025),  
     (-10800, 35300), 
 ]
 
-# 3) Segments
 _6_beaconsperch_to_gatesofkryta_segments = [
     {
-        "map_id": explorable_name_to_id["Deldrimor Bowl"],
+        "map_id": MapID.DeldrimorBowl,
         "path": [
             (12956, -21183),
             (13489.0, -20385.0),
@@ -46,7 +43,7 @@ _6_beaconsperch_to_gatesofkryta_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Griffon's Mouth"],
+        "map_id": MapID.GriffonsMouth,
         "path": [
             (7492, 7030),
             (6866.0, 6484.0),
@@ -76,7 +73,7 @@ _6_beaconsperch_to_gatesofkryta_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Scoundrel's Rise"],
+        "map_id": MapID.ScoundrelsRise,
         "path": [
             (7541.0, 5537.0),
             (6468.0, 3577.0),
@@ -93,7 +90,7 @@ _6_beaconsperch_to_gatesofkryta_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Gates of Kryta outpost"],
+        "map_id": MapID.GatesOfKrytaOutpost,
         "path": [],
     },   
 ]

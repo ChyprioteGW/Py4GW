@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _5_icetoothcave_to_beaconsperch_ids = {
-    "outpost_id": outpost_name_to_id["Ice Tooth Cave"],
+    "outpost_id": MapID.IceToothCave,
 }
 
-# 2) Outpost exit path (inside Ice Tooth Cave)
 _5_icetoothcave_to_beaconsperch_outpost_path = [
     (-11919, 11755),
     (-12150, 11740),
 ]
 
-# 3) Segments
 _5_icetoothcave_to_beaconsperch_segments = [
     {
-        "map_id": explorable_name_to_id["Anvil Rock"],
+        "map_id": MapID.AnvilRock,
         "path": [
             (-13051.0, 12208.0),
             (-13530.0, 12433.0),
@@ -36,7 +33,7 @@ _5_icetoothcave_to_beaconsperch_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Deldrimor Bowl"],
+        "map_id": MapID.DeldrimorBowl,
         "path": [
             (12453.0, 25961.0),
             (11447.0, 25792.0),
@@ -72,7 +69,7 @@ _5_icetoothcave_to_beaconsperch_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Beacons Perch"],
+        "map_id": MapID.BeaconsPerch,
         "path": [],
     },  
 ]          

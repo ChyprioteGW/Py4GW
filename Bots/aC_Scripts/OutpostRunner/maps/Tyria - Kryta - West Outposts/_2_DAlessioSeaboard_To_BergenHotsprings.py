@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _2_dalessioseaboard_to_bergenhotsprings_ids = {
-    "outpost_id": outpost_name_to_id["D'Alessio Seaboard outpost"],
+    "outpost_id": MapID.DalessioSeaboardOutpost,
 }
 
-# 2) Outpost exit path
 _2_dalessioseaboard_to_bergenhotsprings_outpost_path = [
     (16000, 17080),
     (16030, 17200),
 ]
 
-# 3) Segments
 _2_dalessioseaboard_to_bergenhotsprings_segments = [
     {
-        "map_id": explorable_name_to_id["North Kryta Province"],
+        "map_id": MapID.NorthKrytaProvince,
         "path": [
             (-11453.0, -18065.0),
             (-10991.0, -16776.0),
@@ -42,7 +39,7 @@ _2_dalessioseaboard_to_bergenhotsprings_segments = [
         ],
     },
     {
-        "map_id": explorable_name_to_id["Nebo Terrace"],
+        "map_id": MapID.NeboTerrace,
         "path": [
             (19271.0, 5207.0),
             (18307.0, 5369.0),
@@ -61,7 +58,7 @@ _2_dalessioseaboard_to_bergenhotsprings_segments = [
     },
     {
         # "Gates of Kryta" outpost
-        "map_id": outpost_name_to_id["Bergen Hot Springs"],
+        "map_id": MapID.BergenHotSprings,
         "path": [],  # no further walking once you arrive
     },
 ]

@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _1_kamadanjewelofistan_to_sunspeargreathall_ids = {
-    "outpost_id": 449,
+    "outpost_id": MapID.KamadanJewelOfIstan,
 }
 
-# 2) Outpost exit path
 _1_kamadanjewelofistan_to_sunspeargreathall_outpost_path = [
     (-9197, 16187),
     (-9246, 17161),
 ]
 
-# 3) Segments
 _1_kamadanjewelofistan_to_sunspeargreathall_segments = [
     {
-        "map_id": 430,
+        "map_id": MapID.PlainsOfJarin,
         "path": [
             (14453, 1895),
             (12405, 2153),
@@ -30,7 +27,7 @@ _1_kamadanjewelofistan_to_sunspeargreathall_segments = [
         ],
     },
     {
-        "map_id": 431,
+        "map_id": MapID.SunspearGreatHall,
         "path": [],  # no further walking once you arrive
     },
 ]

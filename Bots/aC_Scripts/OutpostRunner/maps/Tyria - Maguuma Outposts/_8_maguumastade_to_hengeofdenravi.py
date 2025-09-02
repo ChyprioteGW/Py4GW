@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _8_maguumastade_to_hengeofdenravi_ids = {
-    "outpost_id": 141,
+    "outpost_id": MapID.MaguumaStade,
 }
 
-# 2) Outpost exit path
 _8_maguumastade_to_hengeofdenravi_outpost_path = [
     (1336, -10749),
     (456, -9825),
 ]
 
-# 3) Segments
 _8_maguumastade_to_hengeofdenravi_segments = [
     {
-        "map_id": 48,
+        "map_id": MapID.TangleRoot,
         "path": [
             (542, -9581),
             (2060, -8272),
@@ -43,7 +40,7 @@ _8_maguumastade_to_hengeofdenravi_segments = [
         ],
     },
     {
-        "map_id": 49,
+        "map_id": MapID.HengeOfDenravi,
         "path": [],  # no further walking once you arrive
     },
 ]

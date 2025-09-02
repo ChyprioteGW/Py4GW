@@ -1,18 +1,15 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _5_frontiergate_to_ruinsofsurmia_ids = {
-    "outpost_id": outpost_name_to_id["Frontier Gate"],
+    "outpost_id": MapID.FrontierGate,
 }
-# 2) Outpost exit path
 _5_frontiergate_to_ruinsofsurmia_outpost_path = [
     (-14118, 4331),
     (-14050, 4330)
 ]
-# 3) Segments
 _5_frontiergate_to_ruinsofsurmia_segments = [
     {
-        "map_id": explorable_name_to_id["Eastern Frontier"],
+        "map_id": MapID.EasternFrontier,
         "path": [
             (-11559.0, 4274.0),
             (-10746.0, 4448.0),
@@ -35,8 +32,7 @@ _5_frontiergate_to_ruinsofsurmia_segments = [
         ],
     },
     {
-        "map_id": outpost_name_to_id["Ruins of Surmia outpost"],
-        "path": [
-        ],
+        "map_id": MapID.RuinsOfSurmiaOutpost,
+        "path": [],
     }
 ]

@@ -1,20 +1,17 @@
-from Py4GWCoreLib.enums import outpost_name_to_id, explorable_name_to_id
+from Py4GWCoreLib.enums import MapID
 
-# 1) IDs
 _7_thegranitecitadel_to_mineralsprings_ids = {
-    "outpost_id": 156,
+    "outpost_id": MapID.TheGraniteCitadel,
 }
 
-# 2) Outpost exit path
 _7_thegranitecitadel_to_mineralsprings_outpost_path = [
     (-10266, 18756),
     (-9653, 19264),
 ]
 
-# 3) Segments
 _7_thegranitecitadel_to_mineralsprings_segments = [
     {
-        "map_id": 92,
+        "map_id": MapID.TascasDemise,
         "path": [
             (-9105, 19727),
             (-7387, 20755),
@@ -35,7 +32,7 @@ _7_thegranitecitadel_to_mineralsprings_segments = [
         ],
     },
     {
-        "map_id": 96,
+        "map_id": MapID.MineralSprings,
         "path": [
             (-21527, -10024),
             (-19978, -8648),
@@ -83,7 +80,7 @@ _7_thegranitecitadel_to_mineralsprings_segments = [
         ],
     },
     {
-        "map_id": 96,
+        "map_id": MapID.MineralSprings,
         "path": [],  # no further walking once you arrive
     },
 ]
