@@ -75,6 +75,9 @@ class CustomSkillClass:
 
             self.MinionsInRange = 0
             self.MinionsInRangeArea = Range.Area.value
+            
+            self.EnemiesInRangeOfTarget = 0
+            self.EnemiesInRangeOfTargetArea = Range.Area.value
 
     class CustomSkill:
         def __init__(self):
@@ -3109,6 +3112,8 @@ class CustomSkillClass:
         skill.SkillType = SkillType.Spell.value
         skill.TargetAllegiance = Skilltarget.Enemy.value
         skill.Nature = SkillNature.Offensive.value
+        skill.Conditions.EnemiesInRangeOfTarget = 2
+        skill.Conditions.EnemiesInRangeOfTargetArea = Range.Adjacent.value
         self.skill_data[skill.SkillID] = skill
 
         skill = self.CustomSkill()
@@ -7611,6 +7616,8 @@ class CustomSkillClass:
         skill.SkillType = SkillType.Skill.value
         skill.TargetAllegiance = Skilltarget.AllyMartial.value
         skill.Nature = SkillNature.Offensive.value
+        skill.Conditions.EnemiesInRangeOfTarget = 2
+        skill.Conditions.EnemiesInRangeOfTargetArea = Range.Adjacent.value
         self.skill_data[skill.SkillID] = skill
 
         skill = self.CustomSkill()
