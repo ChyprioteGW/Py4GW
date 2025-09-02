@@ -706,6 +706,7 @@ class SkillManager:
             feature_count += (1 if Conditions.AlliesInRange > 0 else 0)
             feature_count += (1 if Conditions.SpiritsInRange > 0 else 0)
             feature_count += (1 if Conditions.MinionsInRange > 0 else 0)
+            feature_count += (1 if Conditions.EnemiesInRangeOfTarget > 0 else 0)
 
             if Conditions.IsAlive:
                 if GLOBAL_CACHE.Agent.IsAlive(vTarget):
@@ -926,7 +927,7 @@ class SkillManager:
                         
             if Conditions.EnemiesInRange != 0:
                 player_pos = GLOBAL_CACHE.Player.GetXY()
-                enemy_array = enemy_array = Routines.Agents.GetFilteredEnemyArray(player_pos[0], player_pos[1], Conditions.EnemiesInRangeArea)
+                enemy_array = Routines.Agents.GetFilteredEnemyArray(player_pos[0], player_pos[1], Conditions.EnemiesInRangeArea)
                 if len(enemy_array) >= Conditions.EnemiesInRange:
                     number_of_features += 1
                 else:
@@ -942,7 +943,7 @@ class SkillManager:
                     
             if Conditions.SpiritsInRange != 0:
                 player_pos = GLOBAL_CACHE.Player.GetXY()
-                ally_array = ally_array = Routines.Agents.GetFilteredSpiritArray(player_pos[0], player_pos[1], Conditions.SpiritsInRangeArea)
+                ally_array = Routines.Agents.GetFilteredSpiritArray(player_pos[0], player_pos[1], Conditions.SpiritsInRangeArea)
                 if len(ally_array) >= Conditions.SpiritsInRange:
                     number_of_features += 1
                 else:
@@ -950,12 +951,19 @@ class SkillManager:
                     
             if Conditions.MinionsInRange != 0:
                 player_pos = GLOBAL_CACHE.Player.GetXY()
-                ally_array = ally_array = Routines.Agents.GetFilteredMinionArray(player_pos[0], player_pos[1], Conditions.MinionsInRangeArea)
+                ally_array = Routines.Agents.GetFilteredMinionArray(player_pos[0], player_pos[1], Conditions.MinionsInRangeArea)
                 if len(ally_array) >= Conditions.MinionsInRange:
                     number_of_features += 1
                 else:
                     number_of_features = 0
 
+            if Conditions.EnemiesInRangeOfTarget != 0:
+                target_pos = GLOBAL_CACHE.Agent.GetXY(vTarget)
+                enemy_array = Routines.Agents.GetFilteredEnemyArray(target_pos[0], target_pos[1], Conditions.EnemiesInRangeOfTargetArea)
+                if False:
+                    number_of_features += 1
+                else:
+                    number_of_features = 0
 
             if feature_count == number_of_features:
                 return True
