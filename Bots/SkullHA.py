@@ -38,7 +38,9 @@ def get_wins_in_run(filtered_chat, win_message):
     return sum(1 for message in filtered_chat if message == win_message) 
 
 #Quest Id's
-ha_quest_id = 1110
+ha_quest_id = 1118 #1110
+ha_take_dialog_id = 8674817 #8672769
+ha_receive_dialog_id = 8674823 #8674819 #8672775
 
 #Key Map Points
 underworld_below_bridge_xy = (67, -3341)
@@ -285,7 +287,7 @@ class Routines:
                 
             if BotVariables.has_interacted and BotVariables.action_timer.HasElapsed(1000) and BotVariables.interaction_stage == 0:
                 Py4GW.Console.Log("dialog", "sent dialog")
-                Player.SendDialog(8672769)
+                Player.SendDialog(ha_take_dialog_id)
                 BotVariables.win_streak = 0
                 BotVariables.interaction_stage = 1
                 BotVariables.action_timer.Stop()
@@ -331,7 +333,7 @@ class Routines:
 
         if BotVariables.interaction_stage == 2 and BotVariables.action_timer.HasElapsed(1000):
             Py4GW.Console.Log("dialog", "sent dialog")
-            Player.SendDialog(8672775)
+            Player.SendDialog(ha_receive_dialog_id)
             BotVariables.interaction_stage = 3
             BotVariables.action_timer.Stop()
             BotVariables.action_timer.Start()
@@ -699,7 +701,7 @@ class Combat:
 def DrawWindow():
     global bot_vars, fsm_vars
 
-    PyImGui.begin("HA BOT unclust")
+    PyImGui.begin("HA BOT")
     PyImGui.text("State: " + BotVariables.state)
     fsm_state = FSMVariables.fsm.get_current_step_name() or "None"
     PyImGui.text("FSM State: " + fsm_state)
